@@ -1,0 +1,9 @@
+{
+  "workspace_id": "e90aefcc13f84098aa016f1d06b5167d",
+  "outputs": {
+    "41b6cb0678e2478f9b5232cd984799ca": {
+      "input_path": "C:\\Users\\om.chauhan\\Documents\\IBM\\Vector-less RAG from scratch\\data\\sample 1\\Sample_PO-1.2 (T&C for_mobilization_advance).md",
+      "output_path": "C:\\Users\\om.chauhan\\Documents\\IBM\\Vector-less RAG from scratch\\index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.2_T_C_for_mobilization_advance_.md_41b6cb0678e2478f9b5232cd984799ca.json"
+    }
+  }
+}

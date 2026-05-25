@@ -1,0 +1,15 @@
+{
+  "line_no": 1,
+  "title": "ROOT",
+  "content": "",
+  "children": [
+    {
+      "line_no": 1,
+      "title": "FORMAT FOR NON-DEDUCTION ON ACCOUNT OF PAYMENT TERMS FOR PAYMENT THROUGH VIM.",
+      "content": "\nProject name\n: Building Works for PP and CDW Units Including Civil, Structural and\nArchitectural Works, Lift, HVAC for PP and CDW Buildings for P-25 Project of IOCL PRPC\n\nNature of Contract : LSTK\u00c6EPEM/CONVETIONAL\n\u2612\n\nThis is to certify that Service entry sheet has been prepared in SAP as per the payment\nterms applicable for each item for the above referred Work Order. Records of certified bill\nare maintained in abstract sheet/billing schedule.\n\nTherefore, there is no need to withhold any amount from invoices processed at VIM on\naccount of \"Payment terms\".\n\nAny amount to be withheld on account of \"Payment terms\" shall be maintained by EIC in\nVIM Dash Board as and when same is required.",
+      "children": [],
+      "summary": "This document certifies that service entry sheets for the \"Building Works for PP and CDW Units\" project at IOCL PRPC's P-25 Project have been prepared in SAP, adhering to the payment terms for each item in the work order. Records of certified bills are maintained in abstract sheets/billing schedules.\n\nConsequently, no amount needs to be withheld from invoices processed via VIM due to \"Payment terms.\" Any necessary withholding related to payment terms will be managed by the Engineer-in-Charge (EIC) within the VIM Dashboard as required. The contract type is LSTK/EPEM/CONVENTIONAL."
+    }
+  ],
+  "summary": "This document confirms that service entry sheets for the \"Building Works for PP and CDW Units\" project at IOCL PRPC's P-25 Project have been generated in SAP, aligning with the payment terms specified in the work order. Certified bill records are meticulously maintained in abstract sheets or billing schedules.\n\nTherefore, no withholding of funds from invoices processed through VIM is required based on \"Payment terms.\" Any necessary withholding related to payment terms will be handled by the Engineer-in-Charge (EIC) directly within the VIM Dashboard. The project operates under an LSTK/EPEM/CONVENTIONAL contract type."
+}
