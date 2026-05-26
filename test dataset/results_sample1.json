@@ -1,0 +1,149 @@
+{
+  "sample": 1,
+  "queries_count": 20,
+  "documents_count": 4,
+  "documents": [
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.1 Approval_BBU_payment terms.md",
+      "doc_id": "8cf3c2d2a23844ec92ce2b54c75b8185",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.1_Approval_BBU_payment_terms.md_8cf3c2d2a23844ec92ce2b54c75b8185.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.2 (T&C for_mobilization_advance).md",
+      "doc_id": "ccbbc5acd30c426f9fdb453510a14d2e",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.2_T_C_for_mobilization_advance_.md_ccbbc5acd30c426f9fdb453510a14d2e.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.3 (Payment terms_PI_removed).md",
+      "doc_id": "01a30e5b212a4bedbe4e8bd94f718721",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.3_Payment_terms_PI_removed_.md_01a30e5b212a4bedbe4e8bd94f718721.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.4 (SAP PO text).md",
+      "doc_id": "7e19d93e5aa74989a31e6012621339da",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.4_SAP_PO_text_.md_7e19d93e5aa74989a31e6012621339da.json"
+    }
+  ],
+  "queries": [
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the 50% milestone payment for Structural Steel Painting Works?",
+      "expected": "There is no 50% milestone. Payment is 95% after completion of primer/intermediate/final coats, and 5% on total completion",
+      "answer": "Based on the project's **Special Conditions of Contract - Part B (Commercial)**, the payment terms for **Structural Steel Painting Works** (Item 2.5) are primarily milestone-based.\n\nThere is **no specific \"50% milestone\"** listed for Structural Steel Painting Works. The defined payment milestones for this category are:\n\n*   **95% payment:** Released after completion of touch-up/repair of primer and intermediate coat/coats and final coat.\n    *   *Note:* A further break-up of this 95% schedule may be recommended or approved by the Engineer-in-Charge depending on the number of intermediate coats.\n*   **5% payment:** Released on completion of all works in all respects and issuance of the completion certificate.\n\nFor related structural work categories, a 50% milestone exists for:\n*   **Structural steel works (Free Issue material):** 50% on transportation, fabrication, surface preparation, and primer application (Item 2.1.III).\n*   **Precast concrete Item/Block (Cement Free issue):** 50% on completion of casting work (Item 2.4).\n*   **Platform, Ladder (Contractor supplied):** 50% on receipt and acceptance of material at site (Item 2.10.I.a).\n\n**Source Document:** 01a30e5b212a4bedbe4e8bd94f718721 (Lines 37, 38, and 40)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+      "expected": "100%",
+      "answer": "For the completion of a single quarter of an Annual Maintenance Contract (AMC), the payment percentage is **100%**.\n\nAccording to the **Special Conditions of Contract - Part B (Commercial)** (Document ID: 01a30e5b212a4bedbe4e8bd94f718721), under the section for Progressive Payments (Section 2.0, Item 5), the terms for Annual Maintenance Contract (AMC) specify:\n*   \"100% payment shall be paid at the end of each quarter against quarterly progressive bills to be submitted by Supplier duly certified by authorized representative of Owner.\" (Line 110)\n\nDocument ID: 01a30e5b212a4bedbe4e8bd94f718721 (Lines 32, 110)"
+    },
+    {
+      "category": "Negative Query Handling",
+      "query": "Who provides the heavy lifting cranes for structural erection?",
+      "expected": null,
+      "answer": "The provided documents do not contain information regarding who provides the heavy lifting cranes for structural erection. While structural steel work and payment terms are detailed (Doc ID: 01a30e5b212a4bedbe4e8bd94f718721, Page 19-20), there is no specific mention of the entity responsible for providing heavy lifting crane equipment."
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Which Document ID is associated with the tkIS Contract No. 66-6746?",
+      "expected": "6746-CMG-000-CA-0005",
+      "answer": "Document ID **01a30e5b212a4bedbe4e8bd94f718721** is associated with the **tkIS Contract No. 66-6746**.\n\nThis information is located in the document header for the \"Special Conditions of Contract - Part B (Commercial)\" (Annexure-B-I):\n\n*   **tkIS Contract No.:** 66-6746\n*   **Document ID:** 6746-CMG-000-CA-0005\n*   **Project:** Plant PPU & CDW (Contract Code RHQ, EPCM-3 (P-25))\n\n(Document ID: 01a30e5b212a4bedbe4e8bd94f718721, Line 2)"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "Who takes ownership of materials once a secured advance is paid out?",
+      "expected": "The OWNER",
+      "answer": "Upon payment or disbursement of a secured advance for materials, the **ownership** of those materials vests in the **OWNER** as security for the repayment of the advance (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Line 40).\n\nKey details regarding this ownership transfer include:\n*   **Automatic Vesting:** The ownership transfer occurs \"forthwith\" upon payment without the need for additional acts or deeds (Line 40).\n*   **Status of Materials:** Once ownership vests in the Owner, the materials are deemed \"OWNER supplied materials\" entrusted to the contractor for permanent incorporation in the works (Line 40).\n*   **Prerequisite:** Before the advance is paid, the Contractor and the Engineer-in-Charge must jointly sign a statement identifying the materials (Line 40)."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "Which specific steel items have their price variation governed by Corrigendum 1-Commercial?",
+      "expected": "MS Plates, structural steel, and reinforcement steel",
+      "answer": "The specific steel items whose price variation (escalation/de-escalation) is governed by **Corrigendum 1-Commercial** (specifically Annexure -B-II, dated 11.05.2022) are:\n\n*   **MS Plates**\n*   **Structural steel**\n*   **Reinforcement steel**\n\n**Document Source:**\n*   **Document ID:** 7e19d93e5aa74989a31e6012621339da\n*   **Line Numbers:** 43-45 (Section 3.0 PRICE ESCALATION)"
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Which annexure specifically outlines the ON ACCOUNT PAYMENTS?",
+      "expected": "Annexure-B-I",
+      "answer": "**Annexure-B-I** specifically outlines the **ON ACCOUNT PAYMENTS**.\n\nThis annexure is part of the \"Special Conditions of Contract - Part B (Commercial)\" (Document ID: 01a30e5b212a4bedbe4e8bd94f718721) and details the progressive payment terms for various work categories such as Civil, Structural, Architectural, Electrical, and Package items (Lines 2, 32-33).\n\nSources:\n- **Document ID: 01a30e5b212a4bedbe4e8bd94f718721**, Lines 2, 32, 33."
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What specific materials are considered imperishable for a secured advance?",
+      "expected": "The document does not list specific materials; it states that the decision as to what materials are imperishable is up to the OWNER",
+      "answer": "According to the General Conditions of Contract (GCC), the **Owner** (or the project owner) has the final authority to determine which specific materials are considered imperishable for the purpose of granting a secured advance. \n\nWhile the document identifies \"imperishable materials brought to site for incorporation in the permanent works\" as the general category eligible for such advances, it explicitly states:\n\n*   **Final Decision:** The decision of the Owner as to what materials, if any, are imperishable for the grant of a Secured Advance is final and binding on the Contractor (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Line 6.4.6.0(a)).\n*   **Conditions for Qualification:** The Owner also has the final authority to determine what actions must be taken to qualify a specific material for the grant of a Secured Advance (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Line 6.4.6.0(a)).\n*   **Valuation Assessment:** Values for these materials are assessed by the **Engineer-in-Charge**, who may request vouchers or invoices for verification (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Line 6.4.6.0(b)(i)).\n\n**Sources:**\n*   Document ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Lines 6.4.6.0 and 6.4.6.0(a)-(b)"
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What is the exact total nominal contract value?",
+      "expected": "Cannot be provided exactly; the source text redacts this value as INR xxxx",
+      "answer": "Based on the retrieved documents, the exact total nominal contract value (excluding Comprehensive Annual Maintenance Contract (CAMC) and GST) is **INR 158,09,77,670**.\n\nThis is derived from the following information found in Document **7e19d93e5aa74989a31e6012621339da**:\n*   The contract allows for a Mobilization Advance of up to **10%** of the awarded Contract Value [Line 50].\n*   The maximum amount for this 10% advance is explicitly stated as **INR 15,80,97,767** (Rupees Fifteen Crores Eighty Lakhs Ninety-Seven Thousand Seven Hundred and Sixty-Seven Only) [Line 56]. \n*   Calculating back from the 10% advance (15,80,97,767 * 10) results in the total nominal contract value of **INR 158,09,77,670**.\n\nAdditionally, it is noted that the total nominal contract value excludes **18% GST** [Lines 15, 20] and a separate order will be placed for the **CAMC** [Line 22]."
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What is the exact name of the EPCM Consultant acting as Engineer-in-Charge?",
+      "expected": "Cannot be provided exactly; the name is redacted as Xxxx",
+      "answer": "Based on the retrieved documents, the EPCM Consultant acting as Engineer-in-Charge is **thyssenkrupp Industrial Solutions (India) Private Limited** (often abbreviated as **tkIS**).\n\nSpecifically:\n- **Document 7e19d93e5aa74989a31e6012621339da** (Detailed Letter of Acceptance) identifies the **Engineer-in-Charge** as the **Resident Construction Manager of the EPCM Consultant** (Line 50 summary).\n- **Document 01a30e5b212a4bedbe4e8bd94f718721** (Special Conditions of Contract) explicitly identifies the EPCM Consultant through its contract headers and references, listing it as **tkIS** (thyssenkrupp Industrial Solutions) and providing the specific contract number **tkIS Contract No. 66-6746** (Line 2).\n\nSources:\n- Document ID: 7e19d93e5aa74989a31e6012621339da, Line 50 (Summary)\n- Document ID: 01a30e5b212a4bedbe4e8bd94f718721, Line 2"
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What denomination of non-judicial stamp paper is required from Delhi State?",
+      "expected": "Cannot be provided exactly; the source text redacts this value as INR xxxx",
+      "answer": "For the execution of the contract agreement, a non-judicial stamp paper of **Rs. 100/-** (Rupees One Hundred only) is required from Delhi State (Doc ID: 7e19d93e5aa74989a31e6012621339da, Line 80). \n\nThe formal contract agreement must be executed within 30 days of the receipt of the Detailed Letter of Acceptance (DLOA) on this stamp paper (Doc ID: 7e19d93e5aa74989a31e6012621339da, Lines 78\u201381)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the GST rate for the contract?",
+      "expected": "18%",
+      "answer": "The GST rate for the contract is **18%**.\n\nAccording to the **Detailed Letter of Acceptance**, the total nominal contract value excludes Goods and Services Tax, and \"The GST @18% shall be paid as per clause no. 3 & 4 of Special Conditions of Contract Part-B of tender\" (Doc ID: 7e19d93e5aa74989a31e6012621339da, Line 15-18)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "How many months is the time of completion?",
+      "expected": "16 months",
+      "answer": "The time of completion for the work is **16 (Sixteen) months** from the date of the Fax of Acceptance (FOA), which is 16.09.2022.\n\n**Sources:**\n- **Document ID:** 7e19d93e5aa74989a31e6012621339da (Line 55)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "How is the 5% bank guarantee for slippages calculated and how long must it remain valid?",
+      "expected": "It is a sum equal to 5% of the total contract value and must be valid for not less than 12 months from the date of final completion",
+      "answer": "The 5% bank guarantee for slippages is calculated and maintained according to the following terms:\n\n*   **Calculation:** The contractor has the option to provide a bank guarantee for a sum equal to **5% (five percent) of the total contract value**. This serves as an alternative to the provisional withholding of funds by the owner for price adjustments related to slippages in completion.\n*   **Validity Period:** The bank guarantee must remain valid for a period of **not less than 12 (twelve) months from the date of final completion of the works**.\n\nThese funds or the guarantee are staged to be available for the recovery of any Price Adjustment for Slippages in completion that is finally determined after the works are finished.\n\n**Source:**\n*   Document ID: ccbbc5acd30c426f9fdb453510a14d2e, Lines 1-2."
+    },
+    {
+      "category": "Overall RAG System",
+      "query": "Outline the rules and limits for secured advances on materials brought to the site.",
+      "expected": "The OWNER decides if materials are imperishable; the advance is limited to the lower of 75% of material value or 90% of the scheduled item rate; it is recovered from subsequent running bills; and ownership vests in the OWNER upon payment",
+      "answer": "The rules and limits for secured advances on materials brought to the site are as follows:\n\n### **General Rules and Limits**\n*   **Eligibility:** Secured advances may be provided for imperishable materials that have been brought to the site for use in the work.\n*   **Maximum Amount:** The advance is limited to a percentage of the material's value or the item rate, as specified in the contract terms.\n*   **Ownership:** Upon payment of the secured advance, the ownership of the materials vests with the owner.\n*   **Recovery:** The advance is recovered from subsequent running account (RA) bills.\n(Source: [ccbbc5acd30c426f9fdb453510a14d2e], Title: ROOT)\n\n### **Specific Restrictions and Governance**\n*   **Governing Conditions:** Secured advances are paid in accordance with the Owner\u2019s General Conditions of Contract (GCC).\n*   **Milestone Payment Exclusion:** A crucial exception is that **no secured advance** will be paid for materials if a milestone payment has already been recommended upon the receipt and acceptance of those same materials at the site.\n(Source: [01a30e5b212a4bedbe4e8bd94f718721], Lines 25\u201331)"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "What happens to the bank guarantee if the contractor repays 25% of the mobilization advance?",
+      "expected": "The OWNER may permit the CONTRACTOR to substitute it with a Bank Guarantee reduced by 25%",
+      "answer": "If a contractor repays **25% of the mobilization advance** (and the interest accrued on it) to the satisfaction of the owner, the following applies regarding the bank guarantee:\n\n*   **Substitution of Bank Guarantee:** Upon the contractor's application, the owner may permit the contractor to substitute the existing bank guarantee with a new one for an **amount reduced by 25%** (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Lines 14-17).\n*   **Conditions for Substitution:** This reduction is permissible only if the bank guarantee submitted by the contractor covers and secures **only the mobilization advance** (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Line 15).\n*   **Format and Approval:** The substitute bank guarantee must be in a format approved by the owner and issued by a Scheduled Bank in India acceptable to the owner (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Lines 16-17).\n\nThis same provision for reduction and substitution also applies when the contractor has repaid 50% and/or 75% of the mobilization advance and accrued interest (Doc ID: `ccbbc5acd30c426f9fdb453510a14d2e`, Lines 18-20)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+      "expected": "16 (Sixteen) months",
+      "answer": "The time of completion for the work is **16 (Sixteen) months** from the date of the Fax of Acceptance (FOA), which is dated **16.09.2022**.\n\n**Source:** \n- Document ID: 7e19d93e5aa74989a31e6012621339da\n- Lines: 52-54, 76"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "How much is paid when free-issue carbon steel pipes arrive cement-lined at the site?",
+      "expected": "15%",
+      "answer": "When free-issue carbon steel pipes arrive at the site after being cement-lined (U/G Piping category), the payment term specified for this milestone is **15%**.\n\nThe payment breakdown for **Carbon Steel (Cement Lined) (Pipes - Free Issue)** is as follows:\n*   **15% on completion of Cement lining and receipt of lined pipe at site.**\n*   20% on fabrication. \n*   25% on NDT, Pre-testing, wrapping, coating. \n*   20% on laying in position, welding, radiography etc. \n*   15% after flushing, hydro-testing and back filling of trenches. \n*   05% on completion of all works in all respects and issuance of completion certificate.\n\n**Note:** For free-issue materials taken outside the project premises for cement lining, the contractor must submit a Bank Guarantee for an equivalent amount, valid until the materials are received back at the site plus a 3-month claim period.\n\n**Source Document ID:** 01a30e5b212a4bedbe4e8bd94f718721 (Line 54)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "What is the payment percentage for HVAC drawing approval and what specific financial document must be submitted to get it?",
+      "expected": "5% is paid, and an ABG (Advance Bank Guarantee) of equivalent amount must be submitted",
+      "answer": "For HVAC package items, the payment percentage for drawing approval and the required financial document are as follows:\n\n*   **Payment Percentage:** **5%** is paid against the approval of drawings (at least in Code-2).\n*   **Financial Document:** The contractor must submit an **Advance Bank Guarantee (ABG)** of an equivalent amount to receive this payment.\n\nThis milestone is typically identified in the Purchase Order (PO), Purchase Requisition (PR), or during the Kick-off Meeting.\n\n**Source:**\n*   **Document ID:** 01a30e5b212a4bedbe4e8bd94f718721, Line 120 (Section 4.1: \"For Package items viz. HVAC, Lift, Clean Agent System etc.\")"
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the withholding tax rate based on?",
+      "expected": "The prevailing rate as per the Indian Income Tax Act",
+      "answer": "Based on the retrieved documentation, the withholding tax rate is determined as follows:\n\n*   **Basis for Rate:** Withholding Tax is deducted at the **prevailing rate** [01a30e5b212a4bedbe4e8bd94f718721: 416].\n*   **Legal Framework:** The deduction is made in accordance with the **Indian Income Tax Act** [01a30e5b212a4bedbe4e8bd94f718721: 416].\n*   **Certification:** The Owner is responsible for issuing a TDS (Tax Deducted at Source) certificate for these deductions [01a30e5b212a4bedbe4e8bd94f718721: 416].\n\nAdditionally, progressive payments are subject to other applicable deductions/recoveries as per the terms of the contract [01a30e5b212a4bedbe4e8bd94f718721: 32, 415]."
+    }
+  ]
+}

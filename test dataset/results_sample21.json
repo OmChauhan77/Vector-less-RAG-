@@ -1,0 +1,144 @@
+{
+  "sample": 2,
+  "queries_count": 20,
+  "documents_count": 3,
+  "documents": [
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.1_BG_Updation.md",
+      "doc_id": "0e4fc6c98c7a4cf1a5f88e19836346b3",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.1_BG_Updation.md_0e4fc6c98c7a4cf1a5f88e19836346b3.json"
+    },
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.2_Payment Terms.md",
+      "doc_id": "eece9c3a51654b329461dac2ba61ef6f",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.2_Payment_Terms.md_eece9c3a51654b329461dac2ba61ef6f.json"
+    },
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.3_ PRS deferment.md",
+      "doc_id": "fb64be2a4c3e40ceaf5da4122f166494",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.3__PRS_deferment.md_fb64be2a4c3e40ceaf5da4122f166494.json"
+    }
+  ],
+  "queries": [
+    {
+      "category": "Semantic Retrieval",
+      "query": "Which overall project requires the construction of a warehouse and allied areas?",
+      "expected": "PETROCHEMICAL AND LUBE INTEGRATION PROJECT",
+      "answer": "The project that requires the design, supply, and construction of a warehouse is the **Petrochemical and Lube Integration Project**.\n\nThe specific job scope involves:\n*   Miscellaneous civil works (piling, structural, and underground piping) for EPCM units (GDS, HCU, interconnecting piperack, and allied areas).\n*   **Design, supply, and construction of a warehouse and associated works**.\n\n**Sources:**\n*   **Document ID:** 0e4fc6c98c7a4cf1a5f88e19836346b3 (Lines 3\u20137)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "For submarine pipeline laying, what is the payment percentage for the pre-construction survey compared to dumpsite development?",
+      "expected": "5% for the pre-construction survey and 85% after development of the dumpsite",
+      "answer": "For submarine pipeline laying, the payment percentage for the **pre-construction survey** is **5%** (on a pro-rata basis).\n\nBy comparison, the payment terms for **dumpsite development** are as follows:\n*   **10%** on production of the land lease agreement copy.\n*   **85%** after the development of the dumpsite for receipt of pipes as per specifications.\n*   **5%** on completion of all works and issuance of the completion certificate.\n\n**Summary of Payment Percentages:**\n| Stage/Work | Payment Percentage |\n| :--- | :--- |\n| **Pre-construction survey** (Submarine Pipeline) | **5%** |\n| **Dumpsite development** (Initial steps + completion) | **95%** (10% + 85%) |\n| **Final Completion Certificate** (Dumpsite) | **5%** |\n\nSource: **Document eece9c3a51654b329461dac2ba61ef6f**, Lines 2341, 2351."
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What are the specific other deductions that will be applied to the progress payments?",
+      "expected": "The specific other deductions are not detailed in the provided documents",
+      "answer": "According to the **Annexure to the Special Conditions of Contract (SCC)**, progressive payments (released against running account bills) are subject to the following specific deductions and recoveries:\n\n*   **Statutory Deductions:** All payments are subject to statutory deductions as per various acts, including **Indian Income Tax (TDS)** (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 2336).\n*   **Contractual Retention:** A standard **5% retention** is deducted from progressive payments for almost all work categories (Civil, Piling, Piping, Structural, etc.). This amount is released only upon the issuance of the **Final Completion Certificate** (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Lines 28-36).\n*   **Mobilization Advance Recovery:** Progress payments are subject to the recovery of mobilization advances, which carry an interest rate of **7.70% per annum** (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 13).\n*   **Price Adjustment (Delayed Completion):** Deductions for price adjustments due to delays in completion may be applied. However, specifically for the WP-14 package, there is a provision to **defer these price adjustments** for billing up to 80% of the nominal contract value, provided sufficient funds are available to cover potential defaults (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Line 1).\n*   **General Recoveries:** The Engineer-in-charge is authorized to affect \"necessary deductions/recovery\" as required before certifying running account bills (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 27)."
+    },
+    {
+      "category": "Overall RAG System",
+      "query": "Describe the payment schedule for the supply and erection of contractor-supplied Piping Works fabricated at a yard outside the project premises.",
+      "expected": "50% on receipt at yard (against BG); 20% on fabrication/NDT and receipt at site; 15% site erection/welding; 5% supports/vents/drains; 3% flushing/testing; 2% mechanical completion; 5% completion certificate",
+      "answer": "For contractor-supplied Piping Works fabricated at a yard outside the project premises, the payment schedule is broken down into specific milestones. According to **Annexure - XII to Special Conditions of Contract (Terms of Payment)** in Document ID **eece9c3a51654b329461dac2ba61ef6f**, the schedule is as follows:\n\n### **1. Structural Steel/Piping Fabrication (Yard Outside Premises)**\n*   **05%**: On finalization of quantities, plan, and submission of approved fabrication drawings.\n*   **55%**: On receipt and acceptance of material at the contractor's fabrication yard outside the Project premises. \n    *   *Requirement:* This payment is released against a **Rolling Bank Guarantee** for an equivalent amount of materials at the contractor's shop, with validity until receipt of materials at the Project premises plus a 3-month claim period.\n*   **20%**: On fabrication, surface preparation, application of primer, and receipt of fabricated structures at the site.\n*   **15%**: On erection, alignment, welding, etc.\n*   **05%**: On completion of all works in all respects and issuance of the completion certificate.\n\n### **2. Related Piping Items (Contractor Supplied)**\nFor **Carbon Steel Pipes** supplied by the contractor, the general payment structure at the site level includes:\n*   **50%**: On receipt and acceptance of pipes at site.\n*   **10%**: On fabrication.\n*   **15%**: On NDT, Pre-testing, wrapping, and coating.\n*   **10%**: On laying in position, welding, jointing, and radiography.\n*   **10%**: After flushing, hydro-testing, and backfilling of trenches.\n*   **05%**: On completion and issuance of the completion certificate.\n\n*(Referenced from Document ID: eece9c3a51654b329461dac2ba61ef6f, Lines 42-52)*"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "What document replaces the GCC completion certificate if a different one is specified?",
+      "expected": "The certificate with the separate nomenclature provided for various clients",
+      "answer": "Based on the provided documents, the **Final Completion Certificate** (as defined in the GCC) is replaced by a formal **completion certificate** issued when all works have been completed in all respects.\n\nSpecifically, across various categories of work listed in the **Annexure to the Special Conditions of Contract (SCC)** (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`), the final **5% payment** retention is released only upon the \"completion of all works in all respects and issuance of completion certificate\" (Lines 27-28, 30-31, 35-36).\n\nWhile the documents describe the release of payments tied to this \"completion certificate,\" they do not explicitly name a specific *different document title* that replaces the standard GCC certificate, other than the project-specific completion certificate required to trigger final payment (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`, Page 2-15)."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "If the PMC ensures funds for future defaults, how frequently must the agency report the utilization of the deferred amount?",
+      "expected": "Fortnightly",
+      "answer": "If the PMC ensures that sufficient funds are available for future defaults, the agency must report the utilization of the deferred amount on a **fortnightly basis**.\n\nAccording to the documentation for the WP-14 package:\n*   **PMC Assurance:** The Project Management Consultant (PMC) ensures that sufficient funds are available in case of future defaults or the future applicability of price reductions (Line 11).\n*   **Reporting Frequency:** The agency is required to furnish the utilization of the PRS (Price Reduction Schedule) deferment amount in the prescribed format on a fortnightly basis (Line 12).\n\n**Source:** Document ID `fb64be2a4c3e40ceaf5da4122f166494`, Lines 11-12."
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the specific bank guarantee amount required for the 15% payment of HDD works?",
+      "expected": "There is no 15% payment or bank guarantee mentioned for HDD works.",
+      "answer": "Based on the \"Terms of Payment\" (Annexure XII to the Special Conditions of Contract), there is no specific 15% payment milestone listed for **HDD Works**.\n\nThe payment breakdown for **HDD WORKS** is as follows:\n*   **10%** on carrying out Geotechnical Survey and design Approval.\n*   **25%** on string preparation, NDT clearance, pre-testing and Joint coating.\n*   **10%** on pilot hole drilling.\n*   **35%** on reaming and Pulling of string.\n*   **10%** on Post testing, Tie in and backfilling.\n*   **5%** on Restoration including bentonite disposal and obtaining NOC.\n*   **5%** on completion of all works and issuance of completion certificate.\n\nWhile some other categories (such as **Piping Works** or **Electrical Erection**) do have 15% payment milestones, the document does not specify a bank guarantee requirement specifically for a 15% payment of HDD works. Bank guarantees are generally required for **Mobilization Advances** (110% of the advance amount) or for materials stored **off-site/at contractor yards** (equivalent to the material value).\n\n**Sources:**\n*   **Document ID:** eece9c3a51654b329461dac2ba61ef6f (Line 13, 2333-2336)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "How much is paid for the field welding of contractor-supplied heating coils versus free-issue heating coils?",
+      "expected": "10% for contractor-supplied coils and 15% for free-issue coils",
+      "answer": "Based on the provided document **eece9c3a51654b329461dac2ba61ef6f** (Annexure to SCC), the payment terms for the field welding of heating coils in the **Heaters** section (Nature of Work 11.2) are as follows:\n\n*   **Contractor-supplied heating coils:** **10%** of the payment is released after field welding is completed, which includes radiography and Post Weld Heat Treatment (PWHT) (eece9c3a51654b329461dac2ba61ef6f, Line 2336, Table 11.2, Item I).\n*   **Owner-supplied (Free-issue) heating coils:** **15%** of the payment is released after field welding is completed, which also includes radiography and PWHT (eece9c3a51654b329461dac2ba61ef6f, Line 2336, Table 11.2, Item II).\n\nDocument ID: eece9c3a51654b329461dac2ba61ef6f"
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the payment for receiving free-issue Burners at the site?",
+      "expected": "Free-issue Burners do not have a payment step for receipt at the site; payment is 95% after erection in position at site.",
+      "answer": "According to the payment terms specified for **Heaters** in the Annexure to the Special Conditions of Contract (SCC), the payment for receiving **Burners** at the site depends on whether they are supplied by the Contractor or provided by the Owner as free-issue:\n\n*   **Owner supplied Free Issue Burners:**\n    *   **95%** payment is made after erection in position at the site (line 1150).\n    *   **5%** payment is made on completion of all works in all respects and issuance of a completion certificate (line 1150).\n\n*   **Contractor supplied Burners:**\n    *   **70%** payment is made after receipt and acceptance of material at the site (line 1140).\n    *   **25%** payment is released after erection in position at the site (line 1140).\n    *   **5%** payment is reserved until completion of all works and issuance of a completion certificate (line 1140).\n\n**Document ID:** eece9c3a51654b329461dac2ba61ef6f\n**Line Numbers:** 1140, 1150"
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "How much is paid upon submission of Code 3 drawings for Spheres?",
+      "expected": "Code 3 drawings are not mentioned; payments are only listed for Code 2 (30%) and Code 1 (15%).",
+      "answer": "According to the Payment Terms for **Spheres** (Lumpsum Basis) in Document **eece9c3a51654b329461dac2ba61ef6f**, payments for Design & Engineering Cost are made based on the approval code of drawings.\n\nThere is no specific payment amount listed for \"Code 3\" drawings. The relevant payment milestones for submission and approval are:\n\n*   **50%** is paid on **submission** of drawings and engineering details.\n*   **30%** is paid on approval under **Code 2**.\n*   **15%** is paid on approval under **Code 1**.\n*   **05%** is paid on completion of all works and issuance of the completion certificate.\n\n(Source: **eece9c3a51654b329461dac2ba61ef6f**, Sheet 30 of 46, Line 1250)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "What are the two BG numbers submitted for the PO associated with the Petrochemical and Lube Integration Project?",
+      "expected": "0750223BG0000126 and 0750223BG0000066",
+      "answer": "The two Bank Guarantee (BG) numbers submitted for the Purchase Order (PO) **28630065** associated with the Petrochemical and Lube Integration Project are:\n\n1.  **0750223BG0000126** (dated 18.04.2023)\n2.  **0750223BG0000066** (dated 15.02.2023)\n\n**Source:** Document ID `0e4fc6c98c7a4cf1a5f88e19836346b3`, Lines 1\u201315."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "Up to what percentage of the nominal contract value is the deferment of price adjustment proposed?",
+      "expected": "80%",
+      "answer": "According to the proposal for the **WP-14 package**, the deferment of price adjustment for slippage in completion is proposed for billing **up to 80% of the nominal contract value** without the requirement of submitting a Bank Guarantee (BG).\n\n**Source References:**\n- **Document ID:** fb64be2a4c3e40ceaf5da4122f166494 (Lines 1-8)"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "Who ensures that there is enough money left to cover future price reductions in the WP-14 package?",
+      "expected": "The PMC",
+      "answer": "Based on the document for the **WP-14 package**, the **Project Management Consultant (PMC)** is responsible for ensuring that there are enough funds available to cover future price reductions or defaults.\n\nAccording to document **fb64be2a4c3e40ceaf5da4122f166494**:\n*   \"The **PMC** has ensured that sufficient funds shall be made available in case of future defaults or applicability of price reduction in future\" (Line 11)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the SAP PO number for the BG updation?",
+      "expected": "",
+      "answer": "The SAP PO number for the Bank Guarantee (BG) updation is **28630065**.\n\nThe specific BGs associated with this update are:\n*   **0750223BG0000126** (dated 18.04.2023)\n*   **0750223BG0000066** (dated 15.02.2023)\n\n**Source Document ID:** 0e4fc6c98c7a4cf1a5f88e19836346b3 (Lines 1-12)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "For the Temporary Cathodic Protection System, what is the payment percentage upon approval of the design document versus the issuance of a sub-order?",
+      "expected": "05% for design document approval and 05% for the issuance of a sub-order",
+      "answer": "For the **Temporary Cathodic Protection System**, the payment percentages are as follows:\n\n*   **Upon approval of design document:** 05%\n*   **Upon issuance of sub-order:** 05% (against submission of an equivalent bank guarantee)\n\n**Reference:**\nItem 12.1 under \"TEMPORARY CATHODIC PROTECTION / PERMANENT CATHODIC PROTECTION WORKS,\" Sheet 44 of 46 (Document ID: `eece9c3a51654b329461dac2ba61ef6f`, Line 817)."
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the PRS deferment percentage for the WP-15 package?",
+      "expected": "The document refers to the WP-14 package, not WP-15.",
+      "answer": "The provided documents do not contain information regarding a **WP-15 package** or its specific **PRS deferment percentage**.\n\nThe retrieved content only mentions:\n*   A proposal for the **WP-14 package** (Miscellaneous civil works) for the deferment of price adjustments for billing up to **80% of the nominal contract value** without Bank Guarantee (BG) submission (Doc ID: **fb64be2a4c3e40ceaf5da4122f166494**, Lines 1\u201315).\n*   Details regarding the update of Bank Guarantees in SAP for a project with a similar description, but without reference to a WP-15 package (Doc ID: **0e4fc6c98c7a4cf1a5f88e19836346b3**, Lines 1\u201315)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "How often must the agency furnish the utilization of the PRS deferment amount?",
+      "expected": "On a fortnightly basis",
+      "answer": "The agency must furnish the utilization of the PRS deferment amount on a **fortnightly basis** in the prescribed format (Doc ID: `fb64be2a4c3e40ceaf5da4122f166494`, Line 22)."
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Under which main section are the payment terms for Pipeline Laying (On Shore) listed?",
+      "expected": "Section 12.0",
+      "answer": "The payment terms for **Laying of Pipeline and Associated Works (On Shore)** are listed under the main section **12.0** of the **ANNEXURE TO SCC** (titled \"TERMS OF PAYMENT\").\n\nSpecifically:\n*   The main section heading **12.0** is \"Laying of Pipeline and Associated Works (On Shore)\" (Line 2009).\n*   The detailed breakdown for **Pipeline Laying** (including site development, trenching, welding, etc.) is found under subsection **12.1** (Lines 2011\u20132014).\n\n**Reference Document:** eece9c3a51654b329461dac2ba61ef6f"
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Which clause defines the Mobilization Advance?",
+      "expected": "Section 1.0",
+      "answer": "The **Mobilization Advance** is defined under **Clause 1.0** of the \"Terms of Payment [Annexure - XII to Special Conditions of Contract]\" in document **eece9c3a51654b329461dac2ba61ef6f**.\n\nAccording to the text:\n*   It is an interest-bearing advance with a rate of **7.70% per annum**.\n*   It is paid in a minimum of **two installments**.\n*   It requires a Bank Guarantee (BG) for **110% of the value** of the advance plus applicable GST.\n*   The payment is governed by the **General Conditions of Contract**.\n\n**Reference:**\n*   **Document ID:** eece9c3a51654b329461dac2ba61ef6f\n*   **Line Numbers:** 13\u201319 (Specifically lines 13 and 20 for the clause heading and provision)"
+    },
+    {
+      "category": "Negative Query Handling",
+      "query": "How many days does the Owner have to issue the TDS certificate?",
+      "expected": null,
+      "answer": "The provided documents do not specify the number of days the Owner has to issue the TDS certificate.\n\nWhile document **eece9c3a51654b329461dac2ba61ef6f** confirms that \"TDS certificate shall be issued by the Owner\" under the payment terms (Line 2344), it does not state a specific timeframe or deadline for this issuance.\n\nSources:\n- **Document ID: eece9c3a51654b329461dac2ba61ef6f**, Lines 2343\u20132344."
+    }
+  ]
+}

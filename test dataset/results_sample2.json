@@ -1,0 +1,144 @@
+{
+  "sample": 2,
+  "queries_count": 20,
+  "documents_count": 3,
+  "documents": [
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.1_BG_Updation.md",
+      "doc_id": "0e4fc6c98c7a4cf1a5f88e19836346b3",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.1_BG_Updation.md_0e4fc6c98c7a4cf1a5f88e19836346b3.json"
+    },
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.2_Payment Terms.md",
+      "doc_id": "eece9c3a51654b329461dac2ba61ef6f",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.2_Payment_Terms.md_eece9c3a51654b329461dac2ba61ef6f.json"
+    },
+    {
+      "input_path": "data\\sample 2\\Sample PO 2.3_ PRS deferment.md",
+      "doc_id": "fb64be2a4c3e40ceaf5da4122f166494",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO_2.3__PRS_deferment.md_fb64be2a4c3e40ceaf5da4122f166494.json"
+    }
+  ],
+  "queries": [
+    {
+      "category": "Citation Quality",
+      "query": "Which specific clause discusses the withholding tax and TDS certificate?",
+      "expected": "Note 3 at the end of the document",
+      "answer": "Clause **3** under the **NOTE** section in the **ANNEXURE TO SCC** (Terms of Payment) specifically discusses the withholding tax and TDS certificate.\n\nThe clause states:\n*   \"Withholding Tax at the prevailing rate shall be deducted as per the Indian Income Tax Act. TDS certificate shall be issued by the Owner.\"\n\n**Document ID:** eece9c3a51654b329461dac2ba61ef6f\n**Line Numbers:** 2359-2360"
+    },
+    {
+      "category": "Negative Query Handling",
+      "query": "What is the maximum allowed wind speed during the erection of heavy lift equipment?",
+      "expected": null,
+      "answer": "None of the provided documents (0e4fc6c98c7a4cf1a5f88e19836346b3, eece9c3a51654b329461dac2ba61ef6f, fb64be2a4c3e40ceaf5da4122f166494) contain information regarding the maximum allowed wind speed during the erection of heavy lift equipment.\n\nThe retrieved content focuses on:\n- **Financial and administrative updates** for Bank Guarantees (Doc ID: 0e4fc6c98c7a4cf1a5f88e19836346b3).\n- **Payment terms and milestones** for various engineering works, including heavy lift equipment erection payments (split as 20% for crane mobilization and 45% for transportation/erection), but no technical safety limits for wind speed are mentioned (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Lines 817, 2336).\n- **Requests for deferment of price adjustments** regarding project delays (Doc ID: fb64be2a4c3e40ceaf5da4122f166494)."
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What is the exact monetary value of the 80% nominal contract value for the WP-14 package?",
+      "expected": "The exact monetary value is not specified in the provided documents",
+      "answer": "The retrieved documents do not provide the exact monetary value of the 80% nominal contract value for the WP-14 package.\n\nThe documents confirm the following regarding the WP-14 package:\n*   **Subject:** A proposal was submitted for the \"Approval for Deferment of price Adjustment for Slippage in Completion - Up to 80% of Nominal Contract Value Without BG Submission for WP-14 package\" (Doc ID: `fb64be2a4c3e40ceaf5da4122f166494`, lines 1-3 and 17-19).\n*   **Scope of Work:** The package involves \"Miscellaneous civil works involving piling, civil, structural and underground piping for EPCM units (GDS, HCU, interconnecting piperack and allied areas) and design supply & construction of warehouse and associated works of Petrochemical and Lube Integration Project\" (Doc ID: `fb64be2a4c3e40ceaf5da4122f166494`, lines 5-11; Doc ID: `0e4fc6c98c7a4cf1a5f88e19836346b3`, lines 4-9).\n*   **Reference ID:** The associated SAP Purchase Order number is **28630065** (Doc ID: `0e4fc6c98c7a4cf1a5f88e19836346b3`, line 1).\n\nWhile the documents establish the 80% threshold for billing and price adjustment deferment, they do not state the base \"nominal contract value\" in any currency, making it impossible to calculate the specific monetary value from the provided content."
+    },
+    {
+      "category": "Negative Query Handling",
+      "query": "What is the interest rate applied to Secured Advances on materials?",
+      "expected": null,
+      "answer": "Secured Advances on materials are paid according to the **General Conditions of Contract** (eece9c3a51654b329461dac2ba61ef6f, 21). \n\nWhile the document specifies a **7.70% per annum** interest rate for **Mobilization Advances** (eece9c3a51654b329461dac2ba61ef6f, 14), it does not explicitly state a specific interest rate for Secured Advances, only that they follow the general conditions. Additionally, no Secured Advance is permitted if a Milestone Payment is already provided for the receipt and acceptance of the same material at the site (eece9c3a51654b329461dac2ba61ef6f, 21-23)."
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the payment for the alignment of submarine pipelines?",
+      "expected": "Alignment is not listed as a separate payment milestone for submarine pipelines; instead, 50% covers repairs, welding, radiography, NDT, and installation.",
+      "answer": "The payment terms for the alignment and installation of submarine pipelines (categorized under Laying Work for Free Issue Material) are structured based on the following milestones:\n\n*   **Pre-construction survey:** 5% on completion.\n*   **Mobilization:** 20% on mobilization of the lay-barge and other equipment.\n*   **Logistics:** 10% on receiving, taking over, and transporting coated line pipes to the installation site.\n*   **Installation (including alignment):** 50% on completion of repairs, welding, radiography, NDT, and **installation** (which includes trenching, dredging, and backfilling).\n*   **Testing:** 5% on completion of hydro testing.\n*   **Documentation:** 5% on submission of \"As-Built\" drawings and all other required documents.\n*   **Final Completion:** 5% upon completion of all works in all respects and the issuance of a completion certificate.\n\nProgress payments are subject to statutory deductions, including Indian Income Tax (TDS), as per the terms of the contract.\n\n**Source:**\nDocument ID: eece9c3a51654b329461dac2ba61ef6f, Lines: 2336\u20132337."
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "What happens to the payment if the contractor uses free-issue carbon steel pipes and they are successfully laid in position and welded?",
+      "expected": "A 30% payment is released",
+      "answer": "The payment for work involving **free-issue carbon steel pipes** for underground (U/G) piping depends on the measurement unit specified in the contract:\n\n*   **If measurement is in Running Meters (Item 4.1.4.a):**\n    *   **30%** of the payment is released upon **laying in position, welding, radiography etc.**\n    *   Additionally, the contractor would have already been eligible for **20% on fabrication** and **30% on NDT, pre-testing, wrapping, and coating** prior to this stage.\n    *   The remaining balance is paid after flushing/testing/backfilling (15%) and final completion (5%) (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Lines 31-33).\n\n*   **If measurement is in Inch-Dia & Inch-Meter (Item 4.1.5):**\n    *   For **Fabrication (Inch-Dia)**: **65%** is paid on **welding of joints** (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 37).\n    *   For **Erection (Inch-Meter)**: **45%** is paid on **trenching, laying in position, field welding, jointing, radiography and ready for hydrotesting** (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 39).\n\nNote: If the pipes are **Carbon Steel Cement Lined (Free Issue)**, the payment for \"laying in position, welding, radiography etc.\" is **20%** under the Running Meter measurement category (Doc ID: eece9c3a51654b329461dac2ba61ef6f, Line 34)."
+    },
+    {
+      "category": "Citation Quality",
+      "query": "What section covers Dumpsite Management?",
+      "expected": "Section 12.5",
+      "answer": "Dumpsite Management is covered in **Section 12.5** of Document **eece9c3a51654b329461dac2ba61ef6f**.\n\nThe payment terms for Dumpsite Management as outlined in this section are:\n*   **85%** on completion of work on a pro-rata basis as certified in the progress bill.\n*   **10%** on restoration and obtaining a No Objection Certificate (NOC) from the landowner.\n*   **05%** on completion of all works in all respects and the issuance of a completion certificate.\n\nSources:\n*   Document **eece9c3a51654b329461dac2ba61ef6f**: Lines 2442\u20132445."
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the specific bank guarantee amount required for the 15% payment of HDD works?",
+      "expected": "There is no 15% payment or bank guarantee mentioned for HDD works.",
+      "answer": "Based on the payment terms for **HDD (Horizontal Directional Drilling) Works** outlined in Document **eece9c3a51654b329461dac2ba61ef6f**, there is no specific bank guarantee amount required for a \"15% payment\" stage.\n\nThe document specifies the following regarding bank guarantees and payments for HDD-related works:\n\n*   **HDD Works Progress Milestones:** The 15% payment amount is not listed as a single specific milestone. The closest payment milestones are:\n    *   **25%** on string preparation, NDT clearance, pre-testing, and Joint coating.\n    *   **10%** on pilot hole drilling.\n    *   **10%** on carrying out Geotechnical Survey and design Approval.\n    *   **10%** on Post testing, Tie in, and backfilling. (Ref: **eece9c3a51654b329461dac2ba61ef6f**, lines 2011-2012).\n\n*   **General Bank Guarantee Requirements for Advances:** \n    *   For a **Mobilization Advance**, a Bank Guarantee for **110%** of the advance value plus GST is required (Ref: **eece9c3a51654b329461dac2ba61ef6f**, line 18).\n    *   For **Optical Fibre Cable (HDD-associated supply)**, a **10%** payment is made against a bank guarantee for an **equivalent amount** (Ref: **eece9c3a51654b329461dac2ba61ef6f**, line 2005).\n    *   For **Cathodic Protection Works** (HDD-associated station works), a **5%** payment is made against a bank guarantee for an **equivalent amount** (Ref: **eece9c3a51654b329461dac2ba61ef6f**, line 2015).\n\nIn summary, for standard HDD progress milestones, payments are released upon completion of technical stages rather than against a bank guarantee. Bank guarantees are primarily cited for initial material supplies or mobilization advances."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "How much is paid for the field welding of contractor-supplied heating coils versus free-issue heating coils?",
+      "expected": "10% for contractor-supplied coils and 15% for free-issue coils",
+      "answer": "For the field welding of heating coils (under the \"Heaters\" section), the payment percentages are as follows:\n\n*   **Contractor-supplied heating coils:** **10%** is paid after field welding is completed, which includes radiography and Post Weld Heat Treatment (PWHT).\n*   **Owner-supplied (Free-issue) heating coils:** **15%** is paid after field welding is completed, which also includes radiography and PWHT.\n\n**Sources:**\n*   **Document ID:** eece9c3a51654b329461dac2ba61ef6f\n*   **Line Numbers:** 817 (specifically the table under section **11.2 Coils** on Sheet 36 of 46 / Page 30 of the content provided)."
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "What document replaces the GCC completion certificate if a different one is specified?",
+      "expected": "The certificate with the separate nomenclature provided for various clients",
+      "answer": "Based on the provided documents, specifically within the payment terms outlined in the **Annexure to the Special Conditions of Contract (SCC)** (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`), the **Mechanical Completion certificate** acts as a milestone requirement for releasing specific payments (such as a standard 2% release).\n\nHowever, for the final release of retention money (typically 5%), the documents specify that if a different certificate is defined within the **Special Conditions of Contract (SCC)** or the **Terms of Payment**, it will serve as the requirement for final payment. Specifically, the final payment is withheld until the issuance of the **final completion certificate** as per the milestones defined in the payment terms (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`, Lines 27-80, 817-2330).\n\nIf the GCC completion certificate is substituted, it is typically replaced by the **Mechanical Completion certificate** (for specific milestones) or a project-specific **Final Completion Certificate** as specified in the SCC (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`, Lines 27, 817, 2336)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the payment percentage upon the receipt and acceptance of pipes at the site for contractor-supplied carbon steel pipes?",
+      "expected": "50%",
+      "answer": "For contractor-supplied **carbon steel pipes** used in underground (U/G) piping, the payment percentage upon the receipt and acceptance of pipes at the site is **50%**.\n\nThe full payment schedule for this item is as follows:\n*   **50% on receipt and acceptance of pipes at site.**\n*   10% on fabrication.\n*   15% on NDT, Pre-testing, wrapping, and coating.\n*   10% on laying in position, welding, jointing, radiography, etc.\n*   10% after flushing, hydro-testing, and backfilling of trenches.\n*   05% on completion of all works and issuance of the completion certificate.\n\n**Note:** If the pipes are **Cement Lined** and supplied by the contractor, the payment upon receipt and acceptance at the site is **60%**.\n\n**Source Document:** eece9c3a51654b329461dac2ba61ef6f (Lines 34-36)"
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "What are the two BG numbers submitted for the PO associated with the Petrochemical and Lube Integration Project?",
+      "expected": "0750223BG0000126 and 0750223BG0000066",
+      "answer": "The two Bank Guarantee (BG) numbers submitted for the Purchase Order (**PO: 28630065**) associated with the Petrochemical and Lube Integration Project are:\n\n1.  **0750223BG0000126** (dated 18.04.2023)\n2.  **0750223BG0000066** (dated 15.02.2023)\n\n**Source:** Document ID `0e4fc6c98c7a4cf1a5f88e19836346b3`, lines 1\u201313."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "For submarine pipeline laying, what is the payment percentage for the pre-construction survey compared to dumpsite development?",
+      "expected": "5% for the pre-construction survey and 85% after development of the dumpsite",
+      "answer": "For submarine pipeline laying, the payment percentages are as follows:\n\n*   **Pre-construction survey:** 5% of the payment is released upon completion (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`, Line 2338/2340).\n*   **Dumpsite development:** 85% of the payment is released after the development of the dumpsite for receipt of pipes as per specifications (Doc ID: `eece9c3a51654b329461dac2ba61ef6f`, Line 2375). Additionally, 10% is paid upon production of the land lease agreement copy (Line 2374), and the final 5% is paid upon completion of all works and issuance of the completion certificate (Line 2376)."
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Where are the terms for Secured Advance on Materials located?",
+      "expected": "Section 2.0",
+      "answer": "The terms for **Secured Advance on Materials** are located in **Document eece9c3a51654b329461dac2ba61ef6f** under **Section 2.0: SECURED ADVANCE ON MATERIALS** (line 20).\n\nAccording to the document:\n*   **General Terms:** Secured Advance is paid in accordance with the **General Conditions of Contract** (line 22).\n*   **Exceptions:** No Secured Advance is paid for materials if a **Milestone Payment** has already been recommended for the receipt and acceptance of those materials at the site (lines 23\u201325)."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the payment percentage upon the field testing of piling?",
+      "expected": "80%",
+      "answer": "Based on the Terms of Payment in the **Annexure to the Special Conditions of Contract (SCC)** (Document ID: `eece9c3a51654b329461dac2ba61ef6f`), the payment percentage for the field testing of piling is as follows:\n\n*   **Field Testing:** **80%** (Line 31).\n\nThe remaining payments for piling testing are structured as:\n*   **15%** on the submission of test reports, including analysis and acceptance (Line 32).\n*   **05%** upon completion of all works in all respects and the issuance of a completion certificate (Lines 33-35).\n\nDocument ID: `eece9c3a51654b329461dac2ba61ef6f`"
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the payment for receiving free-issue Burners at the site?",
+      "expected": "Free-issue Burners do not have a payment step for receipt at the site; payment is 95% after erection in position at site.",
+      "answer": "According to the payment terms for **Heaters** (Section 11.0) in the \"Annexure to SCC,\" the payment for receiving and installing Owner-supplied free-issue **Burners** at the site is structured as follows:\n\n*   **95% payment** is released after the Burners are erected in position at the site.\n*   **05% payment** is released upon the completion of all works in all respects and the issuance of the completion certificate.\n\nThere is no specific payment milestone for the \"receipt\" of Burners when they are supplied as free-issue by the Owner; the first payment trigger for these items is their erection.\n\n**Source Documents:**\n*   **Document ID:** eece9c3a51654b329461dac2ba61ef6f\n*   **Line Numbers:** 817 (Table 11.3, \"Burners\")"
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Where is the requirement to furnish the utilization of the PRS deferment amount explicitly stated?",
+      "expected": "Item 12",
+      "answer": "The requirement for the agency to furnish the utilization of the Price Reduction Schedule (PRS) deferment amount is explicitly stated in **Document ID: fb64be2a4c3e40ceaf5da4122f166494** at **Line 12**.\n\nThe document specifies:\n> \"12. The agency shall furnish utilisation of the PRS deferment amount in the prescribed format on fortnightly basis with\" (Line 12).\n\nThis requirement is part of a proposal for the deferment of price adjustments for slippage in completion for the **WP-14 package** (Line 1). Document ID: fb64be2a4c3e40ceaf5da4122f166494."
+    },
+    {
+      "category": "Hallucination Resistance",
+      "query": "What is the 25% payment milestone for NDT of contractor-supplied carbon steel pipes?",
+      "expected": "There is no 25% milestone for this; the NDT milestone for contractor-supplied carbon steel pipes is 15%",
+      "answer": "For contractor-supplied carbon steel pipes under underground (U/G) piping, the payment terms are divided into two categories based on whether the pipes are cement-lined or not. The 25% payment milestone specifically applies to **Cement Lined Carbon Steel Pipes**.\n\nThe breakdown for **Carbon Steel Cement Lined Pipes (Contractor Supplied)** is:\n*   60% on receipt and acceptance of Cement lined pipe at site.\n*   10% on fabrication.\n*   **10% on NDT, Pre-testing, wrapping, coating.**\n*   10% on laying in position, welding, jointing, radiography etc.\n*   05% after flushing, hydro-testing and back filling of trenches.\n*   05% on completion of all works and issuance of completion certificate.\n\nThe **cumulative payment** reached after the NDT/Pre-testing stage for these pipes is **80%** (60% + 10% + 10%). \n\nIf the question refers to the specific **cumulative total** of 25% for \"NDT of contractor-supplied carbon steel pipes,\" there is no single 25% milestone for NDT alone. However, for **standard Carbon Steel Pipes (Contractor Supplied)**, the NDT milestone is **15%** (bringing the cumulative total to 75%). \n\nRelevant Document: **eece9c3a51654b329461dac2ba61ef6f** (Lines 40-41)."
+    },
+    {
+      "category": "Negative Query Handling",
+      "query": "What specific software must be used for the design of the floating roof tanks?",
+      "expected": null,
+      "answer": "Based on the provided documents, the specific software that must be used for the design of the floating roof tanks is not mentioned. \n\nThe documents outline the **payment terms** and **milestones** for floating roof tank design (e.g., 5% payment on design and approval of drawings for both open and covered tanks), but they do not specify the software requirements for that design process.\n\n**Sources:**\n- **Document ID:** eece9c3a51654b329461dac2ba61ef6f \n- **Line Numbers:** 1460-1464, 1469-1470"
+    },
+    {
+      "category": "Overall RAG System",
+      "query": "Summarize the proposal details and requirements for the PRS deferment.",
+      "expected": "It proposes the deferment of price adjustment beyond the contractual completion date without the submission of a BG, for billing up to 80% of the nominal contract value of the WP-14 package, provided the PMC ensures sufficient funds and the agency furnishes fortnightly utilization reports",
+      "answer": "The proposal for the **PRS (Price Reduction Schedule) deferment** for the **WP-14 package** (miscellaneous civil works, piling, structural, and underground piping) includes the following details and requirements:\n\n### **Proposal Details**\n*   **Purpose:** To approve the deferment of price adjustments (penalties) for slippage in project completion beyond the contractual completion date (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Lines 1-3, 14).\n*   **Target Scope:** The deferment is requested for billing up to **80% of the nominal contract value** of the WP-14 package (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Lines 2-3, 15-16).\n*   **Financial Relief:** The proposal seeks to allow this deferment **without the submission of a Bank Guarantee (BG)** against the price adjustment (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Lines 2, 15).\n\n### **Requirements and Safeguards**\n*   **Fund Availability:** The Project Management Consultant (PMC) must ensure that sufficient funds are available to cover potential future defaults or the applicability of price reductions later in the project (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Lines 11-12).\n*   **Reporting:** The executing agency is required to furnish a report on the **utilization of the PRS deferment amount** using a prescribed format (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Line 13).\n*   **Frequency:** This utilization report must be submitted on a **fortnightly basis** (Doc ID: fb64be2a4c3e40ceaf5da4122f166494, Line 14)."
+    }
+  ]
+}

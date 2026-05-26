@@ -1,0 +1,89 @@
+{
+  "sample": 1,
+  "queries_count": 10,
+  "documents_count": 4,
+  "documents": [
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.1 Approval_BBU_payment terms.md",
+      "doc_id": "8cf3c2d2a23844ec92ce2b54c75b8185",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.1_Approval_BBU_payment_terms.md_8cf3c2d2a23844ec92ce2b54c75b8185.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.2 (T&C for_mobilization_advance).md",
+      "doc_id": "ccbbc5acd30c426f9fdb453510a14d2e",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.2_T_C_for_mobilization_advance_.md_ccbbc5acd30c426f9fdb453510a14d2e.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.3 (Payment terms_PI_removed).md",
+      "doc_id": "01a30e5b212a4bedbe4e8bd94f718721",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.3_Payment_terms_PI_removed_.md_01a30e5b212a4bedbe4e8bd94f718721.json"
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.4 (SAP PO text).md",
+      "doc_id": "7e19d93e5aa74989a31e6012621339da",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.4_SAP_PO_text_.md_7e19d93e5aa74989a31e6012621339da.json"
+    }
+  ],
+  "queries": [
+    {
+      "category": "Confidence Calibration",
+      "query": "What denomination of non-judicial stamp paper is required from Delhi State?",
+      "expected": "Cannot be provided exactly; the source text redacts this value as INR xxxx",
+      "answer": "The relevant document is 7e19d93e5aa74989a31e6012621339da.\nA contract agreement must be executed on a non-judicial stamp paper of not less than INR xxxx denomination from Delhi State.\n\nReference:\n- Document: 7e19d93e5aa74989a31e6012621339da, Line Number: 9"
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Which annexure specifically outlines the ON ACCOUNT PAYMENTS?",
+      "expected": "Annexure-B-I",
+      "answer": "The document that specifically outlines \"ON ACCOUNT PAYMENTS\" is `01a30e5b212a4bedbe4e8bd94f718721`. The section is titled \"2.0 ON ACCOUNT PAYMENTS\" and describes the progressive payment terms for a contractor.\n\nAnnexure-B-I of document `01a30e5b212a4bedbe4e8bd94f718721` specifically outlines the \"ON ACCOUNT PAYMENTS.\" This section, titled \"2.0 ON ACCOUNT PAYMENTS,\" details the progressive payment terms for a contractor across various work categories such as Civil, Structural, Architectural, Electrical, and Package Items, as well as Annual Maintenance Contracts. Payments are made against certified running account bills with necessary deductions. The document outlines specific payment percentages tied to project milestones.\n\nHere are some examples of payment terms outlined:\n\n*   **Underground Piping (Carbon Steel - Free Issue)** (line 64):\n    *   20% on fabrication\n    *   30% on NDT, Pre-testing, wrapping, coating\n    *   30% on laying in position, welding, radiography etc.\n    *   15% after flushing, hydro-testing and back filling trenches\n    *   5% on completion of all works and issuance of completion certificate.\n*   **Structural Steel Works (Contractor supplied material)** (line 211):\n    *   5% on finalization of quantities, plan and submission of approved fabrication drawings.\n    *   55% on receipt and acceptance of material at site.\n    *   20% on fabrication, surface preparation and application of primer coat.\n    *   15% on erection, alignment, welding, grouting etc.\n    *   5% on completion of all works and issuance of completion certificate.\n*   **Electrical Works - For Supply Items** (line 335):\n    *   95% on receipt and acceptance of material at site.\n    *   5% on completion of all works and issuance of completion certificate.\n\nThe document also includes notes regarding deductions for income tax and other applicable deductions, the issuance of TDS certificates by the Owner, and the conditions for \"Completion certificate\" and \"Part completion certificate.\"\n\nCited lines: 32, 64, 211, 335 (Document ID: 01a30e5b212a4bedbe4e8bd94f718721)"
+    },
+    {
+      "category": "Semantic Retrieval",
+      "query": "Who acts as the Engineer-in-Charge for this project?",
+      "expected": "The Resident Construction Manager of the EPCM Consultant",
+      "answer": "The Engineer-in-Charge for this project is the Resident Construction Manager of the EPCM Consultant, who the contractor should contact for instructions and to submit a work schedule.\n(Document: 7e19d93e5aa74989a31e6012621339da, Lines: 50-59)"
+    },
+    {
+      "category": "Confidence Calibration",
+      "query": "What is the exact total nominal contract value?",
+      "expected": "Cannot be provided exactly; the source text redacts this value as INR xxxx",
+      "answer": "The total nominal contract value, excluding the Comprehensive Annual Maintenance Contract (CAMC), is INR 1,580,97,767 (excluding 18% GST). A separate order for the CAMC for Rs. Xxxxx will be placed by Panipat Refinery before the warranty period expires. (Doc ID: 7e19d93e5aa74989a31e6012621339da, Line No: 2-5)."
+    },
+    {
+      "category": "Overall RAG System",
+      "query": "What is the payment schedule for steel/aluminium doors and windows?",
+      "expected": "75% on receipt of material; 20% on installation; 5% on completion",
+      "answer": "The payment schedule for steel/aluminium doors and windows can be found in document 01a30e5b212a4bedbe4e8bd94f718721, under the \"ON ACCOUNT PAYMENTS\" section.\n\nThe document does not explicitly state the payment schedule for steel/aluminium doors and windows. It generally outlines payment terms for various work categories (Civil, Structural, Architectural, Electrical, and Package Items), but does not specifically detail a schedule for doors and windows.\n"
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+      "expected": "70%",
+      "answer": "The relevant document is `01a30e5b212a4bedbe4e8bd94f718721`. However, I need to examine the content of this document to find the specific payment percentage for false ceiling material upon receipt at the site. I will look for keywords like \"false ceiling\", \"payment percentage\", and \"material receipt\".For **False Ceiling**, the payment percentage upon receipt of material at the site is **70%** (Document: 01a30e5b212a4bedbe4e8bd94f718721, Line: 32)."
+    },
+    {
+      "category": "Citation Quality",
+      "query": "Under what section number are the payment terms for AMC listed?",
+      "expected": "Section 5.0",
+      "answer": "The payment terms for AMC are listed under section 2.0 \"ON ACCOUNT PAYMENTS\" in document 01a30e5b212a4bedbe4e8bd94f718721, specifically on line 32."
+    },
+    {
+      "category": "Exact Retrieval",
+      "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+      "expected": "100%",
+      "answer": "The payment percentage upon completion of AMC for a single quarter is 2.5%, as stated in the document '01a30e5b212a4bedbe4e8bd94f718721'.\n\nI apologize, but I could not find the specific information about the payment percentage upon completion of AMC for a single quarter within the provided document segments. The document `01a30e5b212a4bedbe4e8bd94f718721` mentions Annual Maintenance Contracts (AMC) in a general sense, but it does not specify the payment percentage for a single quarter. Therefore, I cannot answer the question with the given information."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "What is the interest rate applied if a Running Account Bill for mobilization advance recovery is delayed by 40 days?",
+      "expected": "Interest applied is 1% above the SBI cash credit advance rate. However, interest on the outstanding advance is only applied up to a period of 30 days from the submission of the Running Account Bill",
+      "answer": "The most relevant documents are `ccbbc5acd30c426f9f9db453510a14d2e` and `7e19d93e5aa74989a31e6012621339da` because they discuss mobilization advances. Document `ccbbc5acd30c426f9f9db453510a14d2e` provides general information about mobilization advances and interest accrual, while `7e19d93e5aa74989a31e6012621339da` specifies the interest rate.If a Running Account Bill for mobilization advance recovery is delayed by 40 days, the interest rate applied will be 1% above the State Bank of India's declared rate for cash credit advances that was prevailing on the date of opening of Price Bids. Interest is calculated on the outstanding portion of the Mobilization Advance from any amount certified for payment under the Running Account Bill up to the date of recovery or up to a period of thirty (30) days from the date of submission of the Running Account Bill, whichever is earlier [ccbbc5acd30c426f9fdb453510a14d2e, line 10, 16-17]."
+    },
+    {
+      "category": "Multi-hop Retrieval",
+      "query": "What is the maximum mobilization advance amount in INR and how many installments is it paid in?",
+      "expected": "Up to a maximum of INR 15,80,97,767, paid in two installments",
+      "answer": "The maximum mobilization advance amount is 10% of the contract value, which is INR 15,80,97,767. This advance is paid in two installments.\n\n*   [Document 7e19d93e5aa74989a31e6012621339da, line 50]"
+    }
+  ]
+}

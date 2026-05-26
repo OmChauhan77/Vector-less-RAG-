@@ -1,0 +1,345 @@
+{
+  "Exact Retrieval": [
+    {
+      "query": "What is the SAP PO number for the BG updation?",
+      "answer": ""
+    },
+    {
+      "query": "What is the specific BG number dated 18.04.2023?",
+      "answer": "0750223BG0000126"
+    },
+    {
+      "query": "What is the rate of interest for the Mobilization Advance?",
+      "answer": "7.70% per annum"
+    },
+    {
+      "query": "What percentage of payment is released on the submission of Final Documentation for Soil Investigation?",
+      "answer": "15%"
+    },
+    {
+      "query": "What is the payment percentage upon the field testing of piling?",
+      "answer": "80%"
+    },
+    {
+      "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+      "answer": "95%"
+    },
+    {
+      "query": "What is the payment percentage upon the receipt and acceptance of pipes at the site for contractor-supplied carbon steel pipes?",
+      "answer": "50%"
+    },
+    {
+      "query": "Up to what percentage of the nominal contract value is the deferment of price adjustment proposed?",
+      "answer": "80%"
+    },
+    {
+      "query": "What package is mentioned in the PRS deferment approval document?",
+      "answer": "WP-14 package"
+    },
+    {
+      "query": "How often must the agency furnish the utilization of the PRS deferment amount?",
+      "answer": "On a fortnightly basis"
+    }
+  ],
+
+  "Semantic Retrieval": [
+    {
+      "query": "Which overall project requires the construction of a warehouse and allied areas?",
+      "answer": "PETROCHEMICAL AND LUBE INTEGRATION PROJECT"
+    },
+    {
+      "query": "What is the minimum number of installments required to pay out the interest-bearing cash advance for mobilization?",
+      "answer": "Minimum two instalments"
+    },
+    {
+      "query": "Is a secured advance allowed if a milestone payment has already been approved for materials delivered to the site?",
+      "answer": "No"
+    },
+    {
+      "query": "What happens to the payment if the contractor uses free-issue carbon steel pipes and they are successfully laid in position and welded?",
+      "answer": "A 30% payment is released"
+    },
+    {
+      "query": "What code level approval is required for modular furniture drawings to trigger a 10% payment?",
+      "answer": "Code II"
+    },
+    {
+      "query": "Who issues the TDS certificate for withholding tax?",
+      "answer": "The Owner"
+    },
+    {
+      "query": "How is payment handled for material handling if the Owner forces the contractor to store shipments in the Owner's godown?",
+      "answer": "The contractor may raise part bills for the services completed"
+    },
+    {
+      "query": "What condition allows the deferment of the delay penalty without the need for a bank guarantee?",
+      "answer": "The billing must be up to 80% of the nominal contract value of the WP-14 package"
+    },
+    {
+      "query": "Who ensures that there is enough money left to cover future price reductions in the WP-14 package?",
+      "answer": "The PMC"
+    },
+    {
+      "query": "What document replaces the GCC completion certificate if a different one is specified?",
+      "answer": "The certificate with the separate nomenclature provided for various clients"
+    }
+  ],
+
+  "Multi-hop Retrieval": [
+    {
+      "query": "For the WP-14 package mentioned in the PRS deferment, what is the full name of the job being executed?",
+      "answer": "Miscellaneous civil works involving piling, civil, structural and underground piping for EPCM units (GDS, HCU, interconnecting piperack and allied areas) and design supply & construction of warehouse and associated works of Petrochemical and Lube"
+    },
+    {
+      "query": "What are the two BG numbers submitted for the PO associated with the Petrochemical and Lube Integration Project?",
+      "answer": "0750223BG0000126 and 0750223BG0000066"
+    },
+    {
+      "query": "If a contractor supplies and erects piping via site fabrication, what is the total combined percentage paid once mechanical completion is achieved?",
+      "answer": "95% (Calculated as: 50% on receipt + 20% on fabrication + 15% on erection + 5% on supports + 3% on flushing + 2% on mechanical completion)"
+    },
+    {
+      "query": "What is the total payment percentage for Contractor-supplied gratings fabricated outside the refinery once they are successfully erected and painted?",
+      "answer": "95% (Calculated as: 50% on receipt at yard + 30% on receipt at site + 15% on erection/painting)"
+    },
+    {
+      "query": "If the PMC ensures funds for future defaults, how frequently must the agency report the utilization of the deferred amount?",
+      "answer": "Fortnightly"
+    },
+    {
+      "query": "For the Temporary Cathodic Protection System, what is the payment percentage upon approval of the design document versus the issuance of a sub-order?",
+      "answer": "05% for design document approval and 05% for the issuance of a sub-order"
+    },
+    {
+      "query": "How much is paid for the field welding of contractor-supplied heating coils versus free-issue heating coils?",
+      "answer": "10% for contractor-supplied coils and 15% for free-issue coils"
+    },
+    {
+      "query": "For submarine pipeline laying, what is the payment percentage for the pre-construction survey compared to dumpsite development?",
+      "answer": "5% for the pre-construction survey and 85% after development of the dumpsite"
+    },
+    {
+      "query": "What is the difference in payment percentage upon receipt of free-issue structural steel at the site versus contractor-supplied structural steel at the site?",
+      "answer": "Free issue structural steel is not paid on receipt at the site (50% is paid on transportation to the yard), while contractor-supplied is paid 55% on receipt at the site"
+    },
+    {
+      "query": "Who decides the appropriate payment terms for receipt/dispatch terminals (Station works), and from what basis are they selected?",
+      "answer": "They are selected from the payment terms specified for ITEM RATE TENDERS"
+    }
+  ],
+
+  "Negative Query Handling": [
+    {
+      "query": "What is the payment milestone for fiberglass underground piping?",
+      "answer": null
+    },
+    {
+      "query": "What is the penalty rate for submitting the utilization of the PRS deferment amount on a monthly rather than fortnightly basis?",
+      "answer": null
+    },
+    {
+      "query": "What are the specific payment terms for the installation of solar panels?",
+      "answer": null
+    },
+    {
+      "query": "What is the interest rate applied to Secured Advances on materials?",
+      "answer": null
+    },
+    {
+      "query": "How many days does the Owner have to issue the TDS certificate?",
+      "answer": null
+    },
+    {
+      "query": "What is the payment percentage for painting structural steel with a fourth intermediate coat?",
+      "answer": null
+    },
+    {
+      "query": "Which specific bank issued the BG number 0750223BG0000126?",
+      "answer": null
+    },
+    {
+      "query": "What is the name of the agency applying for the WP-14 PRS deferment?",
+      "answer": null
+    },
+    {
+      "query": "What is the maximum allowed wind speed during the erection of heavy lift equipment?",
+      "answer": null
+    },
+    {
+      "query": "What specific software must be used for the design of the floating roof tanks?",
+      "answer": null
+    }
+  ],
+
+  "Hallucination Resistance": [
+    {
+      "query": "What is the 25% payment milestone for NDT of contractor-supplied carbon steel pipes?",
+      "answer": "There is no 25% milestone for this; the NDT milestone for contractor-supplied carbon steel pipes is 15%"
+    },
+    {
+      "query": "Why is the mobilization advance interest rate set at 10%?",
+      "answer": "The interest rate is not 10%; it is 7.70% per annum"
+    },
+    {
+      "query": "What is the payment milestone for 100% completion of soil investigation without submitting a final report?",
+      "answer": "There is no 100% completion payment without a report; 80% is paid on prorate completion, 15% on the final report, and 5% on the completion certificate"
+    },
+    {
+      "query": "What is the 50% milestone payment for testing Heat Exchangers?",
+      "answer": "There is no 50% milestone; testing heat exchangers triggers a 70% payment"
+    },
+    {
+      "query": "How much money is withheld from the mobilization advance for GST?",
+      "answer": "Nothing is withheld for GST; rather, the advance is paid against a BG for 110% of the value of the advance applicable GST"
+    },
+    {
+        "query":"What is the payment for the alignment of submarine pipelines?",
+        "answer":"Alignment is not listed as a separate payment milestone for submarine pipelines; instead, 50% covers repairs, welding, radiography, NDT, and installation."
+    },
+    {
+        "query":"What is the PRS deferment percentage for the WP-15 package?",
+        "answer":"The document refers to the WP-14 package, not WP-15."
+    },
+    {
+        "query":"What is the payment for receiving free-issue Burners at the site?",
+        "answer":"Free-issue Burners do not have a payment step for receipt at the site; payment is 95% after erection in position at site."
+    },
+    {
+        "query":"How much is paid upon submission of Code 3 drawings for Spheres?",
+        "answer":"Code 3 drawings are not mentioned; payments are only listed for Code 2 (30%) and Code 1 (15%)."
+    },
+    {
+        "query":"What is the specific bank guarantee amount required for the 15% payment of HDD works?",
+        "answer":"There is no 15% payment or bank guarantee mentioned for HDD works."
+    }
+  ],
+
+  "Citation Quality": [
+    {
+      "query": "Which clause defines the Mobilization Advance?",
+      "answer": "Section 1.0"
+    },
+    {
+      "query": "Under which main section are the payment terms for Pipeline Laying (On Shore) listed?",
+      "answer": "Section 12.0"
+    },
+    {
+      "query": "Where is the requirement to furnish the utilization of the PRS deferment amount explicitly stated?",
+      "answer": "Item 12"
+    },
+    {
+      "query": "Which specific clause discusses the withholding tax and TDS certificate?",
+      "answer": "Note 3 at the end of the document"
+    },
+    {
+      "query": "What section details the payment terms for Piling Installation?",
+      "answer": "Section 4.1.2"
+    },
+    {
+      "query": "Which exact section number governs the payment for Tankages?",
+      "answer": "Section 8.0"
+    },
+    {
+      "query": "Where are the terms for Secured Advance on Materials located?",
+      "answer": "Section 2.0"
+    },
+    {
+      "query": "Which section number covers the Submarine Pipe Line?",
+      "answer": "Section 12.2"
+    },
+    {
+      "query": "Where is the specific payment breakdown for Air pre-heaters located?",
+      "answer": "Section 11.4"
+    },
+    {
+      "query": "What section covers Dumpsite Management?",
+      "answer": "Section 12.5"
+    }
+  ],
+
+  "Confidence Calibration": [
+    {
+      "query": "What is the exact monetary value of the 80% nominal contract value for the WP-14 package?",
+      "answer": "The exact monetary value is not specified in the provided documents"
+    },
+    {
+      "query": "Who is the specific Project Manager that needs to be consulted for modifying pipeline laying payment terms?",
+      "answer": "The specific Project Manager is not named in the provided documents"
+    },
+    {
+      "query": "What are the specific other deductions that will be applied to the progress payments?",
+      "answer": "The specific other deductions are not detailed in the provided documents"
+    },
+    {
+      "query": "What is the exact ton capacity required for the crane used to lift heavy equipments?",
+      "answer": "The exact crane ton capacity is not specified in the provided documents"
+    },
+    {
+      "query": "What are the exact criteria to classify a crossing as a major crossing in the pipeline works?",
+      "answer": "The exact classification criteria for a major crossing are not specified in the provided documents"
+    },
+    {
+      "query": "What is the exact layout or format required for the fortnightly utilization report of the PRS deferment?",
+      "answer": "The format/layout of the fortnightly utilization report is not specified in the provided documents"
+    },
+    {
+      "query": "How many intermediate coats are required for Structural Steel Painting Works?",
+      "answer": "The number of intermediate coats is not specified in the provided documents"
+    },
+    {
+      "query": "Which specific banks issued the Bank Guarantees listed for PO: 28630065?",
+      "answer": "The issuing banks are not specified in the provided documents"
+    },
+    {
+      "query": "What is the exact calendar date of completion for the WP-14 package?",
+      "answer": "The exact completion date is not specified in the provided documents"
+    },
+    {
+      "query": "What is the specific name of the contractor executing the WP-14 package?",
+      "answer": "The contractor name is not specified in the provided documents"
+    }
+  ],
+
+  "Overall RAG System": [
+    {
+      "query": "Summarize the full payment schedule for laying On Shore pipelines (Free issue).",
+      "answer": "5% on site development/ROU grading; 10% trenching; 5% stringing; 15% fabrication/welding; 5% radiography/NDT; 5% joint coating; 10% lowering/laying HDPE duct; 5% tie-ins; 10% backfilling; 10% hydro testing; 5% dewatering/pigging; 10% restoration; 5% on completion certificate"
+    },
+    {
+      "query": "Outline the three different payment structures for Structural Steel Works based on the source of the materials.",
+      "answer": "1. Contractor-supplied: 5% on drawings, 55% on receipt, 20% on fabrication, 15% on erection, 5% completion. 2. At issue rates (chargeable): 5% drawings, 75% transportation/fabrication, 15% erection, 5% completion. 3. Free Issue: 5% drawings, 50% transportation/fabrication, 40% erection, 5% completion"
+    },
+    {
+      "query": "What are the payment steps for the installation of an SPM & PLEM System for a submarine pipeline?",
+      "answer": "5% pre-construction survey; 20% mobilization of Lay-barge/equipment; 10% receiving/taking over SPM & PLEM; 55% installation and testing; 5% As-Built drawings; 5% completion certificate"
+    },
+    {
+      "query": "Describe the payment schedule for the supply and erection of contractor-supplied Piping Works fabricated at a yard outside the project premises.",
+      "answer": "50% on receipt at yard (against BG); 20% on fabrication/NDT and receipt at site; 15% site erection/welding; 5% supports/vents/drains; 3% flushing/testing; 2% mechanical completion; 5% completion certificate"
+    },
+    {
+      "query": "What are the conditions that must be met to consider a minimum continuous stretch for the 10% payment of lowering and laying HDPE ducts on-shore?",
+      "answer": "A minimum continuous stretch of 10 KMs or 5% of spread length (whichever is lower) must be considered, except for discontinuities at listed crossings. This does not apply in city areas or where continuous ROU is not released"
+    },
+    {
+      "query": "Outline the payment steps for contractor-supplied open tank floating roofs (Design and plate work).",
+      "answer": "5% design approval; 40% receipt at site; 10% fabrication; 15% erection; 20% welding/NDT; 5% testing; 5% completion certificate"
+    },
+    {
+      "query": "Summarize the breakdown of payments for HDD works.",
+      "answer": "10% Geotechnical Survey/design; 25% string preparation/NDT/pre-testing/coating; 10% pilot hole drilling; 35% reaming/pulling; 10% post-testing/tie-in/backfilling; 5% restoration/NOC; 5% completion certificate"
+    },
+    {
+      "query": "What are the steps and payment percentages for the erection of Heavy lift equipment (Column, Vessels, etc.) on a lump-sum basis?",
+      "answer": "20% on mobilization of required crane; 45% transportation to site and erection on foundation; 25% alignment/grouting; 3% cleaning/box up; 2% mechanical completion; 5% completion certificate"
+    },
+    {
+      "query": "Outline the payment schedule for the Temporary & Permanent Cathodic Protection works.",
+      "answer": "5% design approval; 5% issuance of sub-order (against BG); 40% receipt at site; 20% progressive installation; 25% testing and commissioning (including post-commissioning survey and mitigation); 5% completion certificate"
+    },
+    {
+      "query": "Summarize the proposal details and requirements for the PRS deferment.",
+      "answer": "It proposes the deferment of price adjustment beyond the contractual completion date without the submission of a BG, for billing up to 80% of the nominal contract value of the WP-14 package, provided the PMC ensures sufficient funds and the agency furnishes fortnightly utilization reports"
+    }
+  ]
+}

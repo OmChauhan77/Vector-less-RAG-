@@ -8,6 +8,7 @@ from typing import Dict, List, Tuple
 from dotenv import load_dotenv
 
 from Summary import summarize_text_with_openrouter
+from tracing_utils import setup_tracing, span
 
 
 Node = Dict[str, object]
@@ -385,6 +386,7 @@ def main() -> None:
 	args = parser.parse_args()
 
 	load_dotenv()
+	setup_tracing("indexing")
 	max_tokens_raw = os.getenv("max_tokens_per_node", "2000")
 	try:
 		max_tokens_per_node = int(max_tokens_raw)
@@ -407,12 +409,13 @@ def main() -> None:
 		)
 		return
 
-	root = parse_markdown_to_nodes(markdown_text)
-	_post_process_nodes(root, max_tokens_per_node)
-	_summarize_nodes(root, max_words=200)
-	cleaned_root = _strip_internal_keys(root)
-	output_obj = cleaned_root["children"] if args.no_root else cleaned_root
-	output_json = json.dumps(output_obj, indent=2, ensure_ascii=True)
+	with span("indexing.index_file", {"input_path": input_path}):
+		root = parse_markdown_to_nodes(markdown_text)
+		_post_process_nodes(root, max_tokens_per_node)
+		_summarize_nodes(root, max_words=200)
+		cleaned_root = _strip_internal_keys(root)
+		output_obj = cleaned_root["children"] if args.no_root else cleaned_root
+		output_json = json.dumps(output_obj, indent=2, ensure_ascii=True)
 
 	output_id = uuid.uuid4().hex
 	output_name = f"{_safe_filename(os.path.basename(args.input))}_{output_id}.json"

@@ -6,6 +6,8 @@ from typing import Optional
 
 from dotenv import load_dotenv
 
+from tracing_utils import span
+
 
 def summarize_text_with_openrouter(text: str, max_words: int = 200) -> str:
 	"""Summarize text using an OpenRouter model configured via .env.
@@ -58,17 +60,18 @@ def summarize_text_with_openrouter(text: str, max_words: int = 200) -> str:
 		method="POST",
 	)
 
-	try:
-		with urllib.request.urlopen(request, timeout=60) as response:
-			body = response.read().decode("utf-8")
-	except urllib.error.HTTPError as exc:
-		error_body = exc.read().decode("utf-8", errors="ignore")
-		raise RuntimeError(f"OpenRouter error {exc.code}: {error_body}") from exc
-	except urllib.error.URLError as exc:
-		raise RuntimeError(f"OpenRouter request failed: {exc.reason}") from exc
+	with span("indexing.summarize_text", {"max_words": str(max_words)}):
+		try:
+			with urllib.request.urlopen(request, timeout=60) as response:
+				body = response.read().decode("utf-8")
+		except urllib.error.HTTPError as exc:
+			error_body = exc.read().decode("utf-8", errors="ignore")
+			raise RuntimeError(f"OpenRouter error {exc.code}: {error_body}") from exc
+		except urllib.error.URLError as exc:
+			raise RuntimeError(f"OpenRouter request failed: {exc.reason}") from exc
 
-	data = json.loads(body)
-	return _extract_summary_from_response(data)
+		data = json.loads(body)
+		return _extract_summary_from_response(data)
 
 
 def _extract_summary_from_response(data: dict) -> str:

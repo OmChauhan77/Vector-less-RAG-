@@ -1,0 +1,368 @@
+{
+  "Exact Retrieval": [
+    {
+      "query": "What is the location of the plant mentioned in the Handing Over document?",
+      "answer": "Chittoor, Andhra Pradesh"
+    },
+    {
+      "query": "On what exact date was the site officially handed over?",
+      "answer": "22.08.2022"
+    },
+    {
+      "query": "How many months is the total period of completion from the date of the LOA?",
+      "answer": "Seven (7) months"
+    },
+    {
+      "query": "What is the exact deadline date for completing the Supply per SOR?",
+      "answer": "21.01.2023"
+    },
+    {
+      "query": "What performance rating is awarded for obtaining greater than 80% marks?",
+      "answer": "Very Good"
+    },
+    {
+      "query": "What Roman numeral in the index represents the Safety Declaration?",
+      "answer": "VII"
+    },
+    {
+      "query": "Which item number (Sn) covers Special Clauses of Taxation S?",
+      "answer": "5"
+    },
+    {
+      "query": "What is the exact formula written in the table for calculating Total Marks obtained (C)?",
+      "answer": "C=A-8"
+    },
+    {
+      "query": "What percentage range corresponds to a Fair performance rating?",
+      "answer": ">40% but <60%"
+    },
+    {
+      "query": "What is the title of Annex IV as listed in the technical bid index?",
+      "answer": "Proforma of declaration of blacklisting/holiday listing"
+    }
+  ],
+
+  "Semantic Retrieval": [
+    {
+      "query": "Does the contractor's scope of work include installing pipes and machinery?",
+      "answer": "Yes, Mechanical (Piping, Vessels & Machinery) is explicitly included in the scope"
+    },
+    {
+      "query": "Are the deadlines for delivering materials and finishing the installation the same?",
+      "answer": "No. Supply is due by 21.01.2023, while total completion is due by 21.03.2023"
+    },
+    {
+      "query": "If a contractor scores a 35% on their performance evaluation, what qualitative grade will they receive?",
+      "answer": "Unsatisfactory"
+    },
+    {
+      "query": "Where should a bidder look to find information about submitting their banking information?",
+      "answer": "Roman numeral VI (Format for giving consent and bank details on letter head)"
+    },
+    {
+      "query": "What administrative action happens if a contractor is barred from future work?",
+      "answer": "The procedures for holiday listing/banning will be followed, including issuance of show cause notices"
+    },
+    {
+      "query": "Do contractors have to pay a cash Earnest Money Deposit (EMD) according to the index?",
+      "answer": "No, a Bid Security Declaration From Bidders In Lieu Of Emd is required"
+    },
+    {
+      "query": "Is there a form required to report conflicts of interest with the client company's board?",
+      "answer": "Yes, Details of relationship with XXXX's directors etc."
+    },
+    {
+      "query": "What kind of safety infrastructure is being built at the Chittoor site?",
+      "answer": "Fire Protection System"
+    },
+    {
+      "query": "Is the bidding process done physically on paper or digitally?",
+      "answer": "Digitally, as the document references a Notice inviting e-tender and documents required to be uploaded"
+    },
+    {
+      "query": "What document serves as official proof that physical access to the land was given to the contractor?",
+      "answer": "The Handing Over and Taking Over Certificate"
+    }
+  ],
+
+  "Multi-hop Retrieval": [
+    {
+      "query": "Based on the 5-month deadline ending on 21.01.2023, what is the implicit date of the Letter of Award (LOA)?",
+      "answer": "21.08.2022"
+    },
+    {
+      "query": "Did the site handover happen before or after the implicit LOA date?",
+      "answer": "After. The implied LOA date is 21.08.2022, and the site handover was on 22.08.2022"
+    },
+    {
+      "query": "If a contractor gets 75 out of 100 possible marks, what is their final performance rating?",
+      "answer": "Good"
+    },
+    {
+      "query": "How much time is strictly allocated for Erection, Installation, Testing & Commissioning after the supply deadline has passed?",
+      "answer": "Exactly 2 months (from 21.01.2023 to 21.03.2023)"
+    },
+    {
+      "query": "Looking at Roman numerals VIII through XI, which one is related to employee insurance?",
+      "answer": "VIII (Indemnity bond undertaking for ESIC)"
+    },
+    {
+      "query": "What is the difference in percentage points between the minimum threshold for Very Good and the maximum threshold for Unsatisfactory?",
+      "answer": "40 percentage points"
+    },
+    {
+      "query": "Does the handover document listing the 21.03.2023 deadline also name the specific contractor assigned to the work?",
+      "answer": "No, the Name Of the Contractor field is blank"
+    },
+    {
+      "query": "To find the Proforma of declaration of blacklisting, which index item number and which corresponding textual section on banning would you reference?",
+      "answer": "Roman Numeral IV, which connects to the text discussing procedures for banned/Holidaylisted"
+    },
+    {
+      "query": "Is there a numbering discrepancy between the text for Total Deduction of Marks and the table that calculates Total Marks?",
+      "answer": "Yes. The text references deductions at 12.1, 12.2, 12.3 & 12.4, while the table references deductions calculated at 10.5"
+    },
+    {
+      "query": "Does the Chittoor project scope explicitly mention Electrical Automation like the Kharagpur project?",
+      "answer": "No, the Chittoor project specifies Fire Protection System and Mechanical (Piping, Vessels & Machinery)"
+    }
+  ],
+
+  "Negative Query Handling": [
+    {
+      "query": "What is the name of the contractor who received the site at Chittoor?",
+      "answer": null
+    },
+    {
+      "query": "What specific criteria are evaluated in sections 12.1, 12.2, and 12.3 to deduct marks?",
+      "answer": null
+    },
+    {
+      "query": "What is the total financial budget allocated for the Fire Protection System?",
+      "answer": null
+    },
+    {
+      "query": "Who signed the Handing Over certificate on behalf of the client?",
+      "answer": null
+    },
+    {
+      "query": "On what specific page number is the Bank guarantee proforma located?",
+      "answer": null
+    },
+    {
+      "query": "What are the specific metrics a contractor must hit to score above 80%?",
+      "answer": null
+    },
+    {
+      "query": "What is the water holding capacity of the vessels being installed in Chittoor?",
+      "answer": null
+    },
+    {
+      "query": "What is the name of the project manager overseeing the site handover?",
+      "answer": null
+    },
+    {
+      "query": "Which specific directors of the company are mentioned by name in the relationship declaration?",
+      "answer": null
+    },
+    {
+      "query": "What is the exact alphanumeric Work Order Reference Number for this project?",
+      "answer": null
+    }
+  ],
+
+  "Hallucination Resistance": [
+    {
+      "query": "Because the project is in Andhra Pradesh, does the document mention the local power grid (APSPDCL)?",
+      "answer": "No, the documents do not mention APSPDCL or any local power grid"
+    },
+    {
+      "query": "Was the physical site handed over to the contractor on 21.03.2023?",
+      "answer": "Incorrect. 21.03.2023 is the final completion date. The site was handed over on 22.08.2022"
+    },
+    {
+      "query": "Does a contractor automatically receive a Very Good rating if they complete the work a month early?",
+      "answer": "No. The rating is based strictly on the percentage of marks obtained"
+    },
+    {
+      "query": "Is the required Earnest Money Deposit (EMD) amount explicitly stated as ₹50,000?",
+      "answer": "No amount is stated; instead, a Bid Security Declaration In Lieu Of Emd is required"
+    },
+    {
+      "query": "Does the index for this Technical Bid include a Price Schedule?",
+      "answer": "No, the visible index does not list a Price Schedule"
+    },
+    {
+        "query": "Are civil engineering and architectural works part of the Chittoor handover scope?",
+        "answer": "No, the scope only covers the Fire Protection System and Mechanical (Piping, Vessels & Machinery) & allied plant."
+    },
+    {
+        "query": "In the performance table, is the total mark \"C\" calculated as A + B?",
+        "answer": "No, it is calculated as A minus B (written in the text as C=A-8 due to a typo)."
+    },
+    {
+        "query": "Does Annexure X correspond to the Safety Declaration?",
+        "answer": "No, the Safety Declaration is item VII. Annex X is the \"Bank guarantee proforma in lieu of security deposit\"."
+    },
+    {
+        "query": "Does the performance rating table assign a maximum of 100 marks to variable 'A'?",
+        "answer": "The text does not explicitly define the maximum total marks for variable 'A'."
+    },
+    {
+        "query": "Is the contractor legally required to hire retired directors to win the bid?",
+        "answer": "No, they are only required to provide \"Details of employing retired director/s\"."
+    }
+  ],
+
+  "Citation Quality": [
+    {
+      "query": "Quote the exact text outlining the conditions for the supply timeframe.",
+      "answer": "\"However, it must be noted that the Supply per SOR has to be completed within 5 months from date of LOA i.e. by 21.01.2023\""
+    },
+    {
+      "query": "Quote the exact scope of work listed in the Handing Over document.",
+      "answer": "\"Supply, Fabrication, Erection, Testing & Commissioning of Fire Protection System and Mechanical (Piping, Vessels & Machinery) & allied Plant, Chittoor, Andhra Pradesh\""
+    },
+    {
+      "query": "What is the exact text written in the table for Total Marks obtained?",
+      "answer": "\"C=A-8\""
+    },
+    {
+      "query": "Quote the specific procedural requirement listed when a contractor is to be banned or holiday listed.",
+      "answer": "\"...the procedures for holiday listing as required including that for issuance of show cause notice shall be followed.\""
+    },
+    {
+      "query": "What is the exact title of section 14.0?",
+      "answer": "\"Performance Rating of Contractor:\""
+    },
+    {
+      "query": "Quote the performance rating text for a contractor who scores exactly <40%.",
+      "answer": "\"Unsatisfactory\""
+    },
+    {
+      "query": "What is the exact header at the top of the Technical Bid document?",
+      "answer": "\"TECHNICAL / COMMERCIAL BID (TWO BID)\""
+    },
+    {
+      "query": "Quote the exact text for Roman numeral VIII in the index.",
+      "answer": "\"Indemnity bond undertaking for ESIC\""
+    },
+    {
+      "query": "What is the exact text for Roman numeral X?",
+      "answer": "\"Format Of Bid Security Declaration From Bidders In Lieu Of Emd\""
+    },
+    {
+      "query": "Quote the calculation stated in section 12.5.",
+      "answer": "\"Total Deduction of Marks as calculated at 12.1,12.2,12.3 &12.4 =\""
+    }
+  ],
+
+  "Confidence Calibration": [
+    {
+      "query": "Will the contractor for the Chittoor project definitely be holiday listed?",
+      "answer": "Cannot answer; the document only describes the procedure if a contractor is to be holiday listed"
+    },
+    {
+      "query": "What specific criteria are used to evaluate section 9.0 (Marks A)?",
+      "answer": "Cannot answer; the evaluation rubric for section 9.0 is not included in the provided text"
+    },
+    {
+      "query": "Was the site officially handed over on the exact date originally intended in the LOA?",
+      "answer": "Low confidence; the LOA date is only implied and the document does not specify whether the handover occurred exactly on schedule"
+    },
+    {
+      "query": "Why does the table write C=A-8 instead of C=A-B?",
+      "answer": "Cannot answer definitively; it appears to be a typographical or OCR error, but the document itself does not explain it"
+    },
+    {
+      "query": "Is the contractor bidding on this project a registered MSME?",
+      "answer": "Cannot answer; no MSME status information is provided"
+    },
+    {
+      "query": "What is the exact street address of the Chittoor allied plant?",
+      "answer": "Cannot answer; only Chittoor, Andhra Pradesh is specified"
+    },
+    {
+      "query": "How many pages long is the Instructions To Tenderers section?",
+      "answer": "Cannot answer; page numbers are not provided in the visible index portion"
+    },
+    {
+      "query": "Which specific director's relationship must the bidder disclose?",
+      "answer": "Cannot answer; the document generally refers to XXXX's directors etc. without naming individuals"
+    },
+    {
+      "query": "Is the EMD completely waived for all bidders unconditionally?",
+      "answer": "Low confidence; the document replaces EMD with a Bid Security Declaration, but exact legal conditions are not detailed"
+    },
+    {
+      "query": "What does the variable 8 stand for in the final formula table?",
+      "answer": "High confidence it is intended to represent variable B (Deduction of Marks), based on the surrounding table context"
+    }
+  ],
+
+  "Overall RAG System": [
+    {
+      "query": "Create a markdown table of the Performance Rating Chart exactly as presented in the document.",
+      "answer": "| SN | %age of Marks obtained | Performance Rating |\n| --- | --- | --- |\n| 1 | >80% | Very Good |\n| 2 | >60% but <80% | Good |\n| 3 | >40% but <60% | Fair |\n| 4 | <40% | Unsatisfactory |"
+    },
+    {
+      "query": "Summarize the project scope and its two distinct completion deadlines.",
+      "answer": "The project covers the supply, fabrication, erection, testing, and commissioning of a Fire Protection System and Mechanical setup at Chittoor, Andhra Pradesh. Supply per SOR must be completed by 21.01.2023, while total project completion is due by 21.03.2023"
+    },
+    {
+      "query": "Identify two pieces of critical identifying information that are missing or left blank in the Handing Over and Taking Over Certificate.",
+      "answer": [
+        "The Name Of the Contractor field is blank",
+        "The Work Order Reference NO. field does not contain a value"
+      ]
+    },
+    {
+      "query": "Explain the logical and formatting discrepancies in the document regarding the calculation of mark deductions.",
+      "answer": "The document contains two inconsistencies. First, section 12.5 references deductions from 12.1, 12.2, 12.3 & 12.4, while the later table references deductions calculated at 10.5. Second, the table defines B as Deduction of Marks, but the formula is written as C=A-8 instead of the logically correct C=A-B"
+    },
+    {
+      "query": "List all the required declarations (by Roman numeral) that relate to a bidder's corporate relationships and financial security.",
+      "answer": [
+        "I: Relationship with directors",
+        "II: Employing retired directors",
+        "III: Board of directors",
+        "VIII: Indemnity bond undertaking for ESIC",
+        "X: Bid Security Declaration in lieu of EMD",
+        "XI: Bank guarantee proforma in lieu of security deposit"
+      ]
+    },
+    {
+      "query": "What are the consequences for a contractor who receives a score of 30%, and what is that rating called?",
+      "answer": "A score of 30% falls under the <40% category and receives an Unsatisfactory rating. Such contractors may become subject to banning or holiday listing procedures, including issuance of show cause notices"
+    },
+    {
+      "query": "Extract all dates mentioned in the site handover document and explain what each one represents.",
+      "answer": [
+        {
+          "date": "22.08.2022",
+          "meaning": "Date of physical site handover"
+        },
+        {
+          "date": "21.01.2023",
+          "meaning": "Deadline for completion of Supply per SOR"
+        },
+        {
+          "date": "21.03.2023",
+          "meaning": "Final deadline for total project completion"
+        }
+      ]
+    },
+    {
+      "query": "What evidence in the Technical Bid document suggests that this is a digital/online bidding process?",
+      "answer": "The document explicitly references a Notice inviting e-tender and includes sections for documents required to be uploaded"
+    },
+    {
+      "query": "Based on the timelines provided, exactly how much time does the contractor have for physical installation and testing after the supply phase is mandated to be complete?",
+      "answer": "Exactly 2 months, from 21.01.2023 until 21.03.2023"
+    },
+    {
+      "query": "Reconstruct the intended equation for calculating the contractor's final performance mark, correcting for the text's typos.",
+      "answer": "Total Marks Obtained (C) = Marks obtained at 9.0 (A) - Deduction of Marks (B)"
+    }
+  ]
+}

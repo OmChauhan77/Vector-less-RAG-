@@ -1,0 +1,275 @@
+{
+  "sample": 1,
+  "queries_count": 10,
+  "documents_count": 4,
+  "documents": [
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.1 Approval_BBU_payment terms.md",
+      "doc_id": "8cf3c2d2a23844ec92ce2b54c75b8185",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.1_Approval_BBU_payment_terms.md_8cf3c2d2a23844ec92ce2b54c75b8185.json",
+      "results": [
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the GST rate for the contract?",
+          "expected": "18%",
+          "answer": "The document does not specify the GST rate for the contract. It primarily discusses the processing of service entry sheets and withholding amounts related to payment terms. Therefore, I cannot answer your question about the GST rate."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+          "expected": "16 (Sixteen) months",
+          "answer": "The provided document does not contain information about the time of completion from the date of the Fax of Acceptance (FOA). It primarily discusses the processing of service entry sheets and payment terms for a specific project."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What percentage is paid for the field testing of Piling?",
+          "expected": "80%",
+          "answer": "The document provided (\"8cf3c2d2a23844ec92ce2b54c75b8185\") does not contain information about the percentage paid for the field testing of Piling. It primarily discusses payment terms, service entry sheets, and withholdings for a specific project."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+          "expected": "70%",
+          "answer": "The document you provided does not contain information about the payment percentage upon receipt of false ceiling material. It discusses service entry sheets, SAP processing, and payment terms for the \"Building Works for PP and CDW Units...\" project. Therefore, I cannot answer your question based on the provided document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the maximum percentage of the contract value allowed for a mobilization advance?",
+          "expected": "10%",
+          "answer": "The document 8cf3c2d2a23844ec92ce2b54c75b8185 discusses service entry sheets and payment terms for a specific project. It does not contain information about the maximum percentage of the contract value allowed for a mobilization advance. Therefore, I cannot answer your question based on the provided document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "How many months is the time of completion?",
+          "expected": "16 months",
+          "answer": "The document does not contain information about the time of completion in months. It primarily discusses the processing of service entry sheets and payment terms for a construction project."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+          "expected": "100%",
+          "answer": "The provided document discusses payment terms for a construction project and states that no amount needs to be withheld from invoices processed at VIM due to \"Payment terms.\" It does not contain information on the payment percentage upon completion of AMC for a single quarter. Therefore, I cannot answer the question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the date of the price negotiation meeting?",
+          "expected": "26.08.2022",
+          "answer": "The provided document (8cf3c2d2a23844ec92ce2b54c75b8185) does not contain information about the date of a price negotiation meeting. It discusses payment terms and service entry sheets for a construction project."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the withholding tax rate based on?",
+          "expected": "The prevailing rate as per the Indian Income Tax Act",
+          "answer": "This document states that \"Service entry sheet has been prepared in SAP as per the payment terms applicable for each item for the above referred Work Order\". It also notes that \"Records of certified bill are maintained in abstract sheet/billing schedule.\" Therefore, no amount needs to be withheld from invoices processed at VIM due to \"Payment terms.\" Any necessary withholdings related to \"Payment terms\" will be handled by the EIC in the VIM Dashboard as required. (8cf3c2d2a23844ec92ce2b54c75b8185:1)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+          "expected": "95%",
+          "answer": "The provided document does not contain information about the payment percentage for the installation of an individual pile for its full length. The document outlines a process for service entry sheets and payment terms for a construction project, but it does not detail specific payment percentages for individual work items like pile installation."
+        }
+      ]
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.2 (T&C for_mobilization_advance).md",
+      "doc_id": "ccbbc5acd30c426f9fdb453510a14d2e",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.2_T_C_for_mobilization_advance_.md_ccbbc5acd30c426f9fdb453510a14d2e.json",
+      "results": [
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the GST rate for the contract?",
+          "expected": "18%",
+          "answer": "The provided document does not contain information about the GST rate for the contract."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+          "expected": "16 (Sixteen) months",
+          "answer": "The provided document summary does not contain information about the time of completion from the date of the Fax of Acceptance (FOA). Therefore, I cannot answer your question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What percentage is paid for the field testing of Piling?",
+          "expected": "80%",
+          "answer": "The provided document outline doesn't contain information about the percentage paid for field testing of Piling. Therefore, I cannot answer the question using the given document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+          "expected": "70%",
+          "answer": "The document states that secured advances for imperishable materials brought to the site for incorporation into permanent works are limited to the lower of the following:\n\n(i) **75%** of the value of the imperishable material as assessed by the Engineer-in-Charge.\n(ii) **90%** of the concerned item rate for the work in which the material is to be incorporated.\n\nTherefore, the payment percentage upon receipt of false ceiling material (assuming it's an imperishable material) at the site would be 75% of its value or 90% of the item rate, whichever is lower.\n\n(Doc ID: ccbbc5acd30c426f9fdb453510a14d2e, Line Nos: 56-57)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the maximum percentage of the contract value allowed for a mobilization advance?",
+          "expected": "10%",
+          "answer": "The maximum percentage of the contract value allowed for a mobilization advance is up to 10% for contracts valued at Rs. 5 crore or more. (ccbbc5acd30c426f9fdb453510a14d2e:7)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "How many months is the time of completion?",
+          "expected": "16 months",
+          "answer": "I cannot answer your question about the time of completion because the provided document \"ccbbc5acd30c426f9fdb453510a14d2e\" does not contain information about the duration of the project in months. It primarily focuses on financial provisions, such as price adjustments for completion slippage and details regarding mobilization advances and secured advances for materials."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+          "expected": "100%",
+          "answer": "The provided document does not contain information about the payment percentage upon completion of AMC for a single quarter. I can only see information about price adjustments for completion slippage, mobilization advances, and secured advances for materials."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the date of the price negotiation meeting?",
+          "expected": "26.08.2022",
+          "answer": "The document does not contain information about a price negotiation meeting or its date. Therefore, I cannot answer your question based on the provided document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the withholding tax rate based on?",
+          "expected": "The prevailing rate as per the Indian Income Tax Act",
+          "answer": "The provided document does not contain information about the withholding tax rate or what it is based on. Therefore, I cannot answer your question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+          "expected": "95%",
+          "answer": "The document does not contain information about the payment percentage for the installation of an individual pile for its full length. It primarily focuses on financial provisions, price adjustments, mobilization advances, and secured advances for imperishable materials."
+        }
+      ]
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.3 (Payment terms_PI_removed).md",
+      "doc_id": "01a30e5b212a4bedbe4e8bd94f718721",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.3_Payment_terms_PI_removed_.md_01a30e5b212a4bedbe4e8bd94f718721.json",
+      "results": [
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the GST rate for the contract?",
+          "expected": "18%",
+          "answer": "The provided document, \"Special Conditions of Contract - Part B (Commercial) Rev 00 Page 16 of 33,\" (01a30e5b212a4bedbe4e8bd94f718721) does not contain information on the GST rate for the contract. Therefore, I cannot answer the question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+          "expected": "16 (Sixteen) months",
+          "answer": "The provided document structure does not contain information about the time of completion from the date of the Fax of Acceptance (FOA). The document focuses on payment conditions, specifically Secured Advance and progressive payments."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What percentage is paid for the field testing of Piling?",
+          "expected": "80%",
+          "answer": "80% of the payment for Piling - testing is paid on field testing.\n_Doc ID: 01a30e5b212a4bedbe4e8bd94f718721, Line Number: 32_"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+          "expected": "70%",
+          "answer": "For False Ceiling material, the payment percentage upon receipt of material at the site is 70%. (Document 01a30e5b212a4bedbe4e8bd94f718721, line 32)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the maximum percentage of the contract value allowed for a mobilization advance?",
+          "expected": "10%",
+          "answer": "The document \"01a30e5b212a4bedbe4e8bd94f718721\" does not contain information about the maximum percentage of the contract value allowed for a mobilization advance, as it focuses on Secured Advance on materials and On Account Payments tied to project milestones. Therefore, I cannot answer your question based on the provided document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "How many months is the time of completion?",
+          "expected": "16 months",
+          "answer": "This document does not contain information about the total time of completion for the project in months. It primarily focuses on payment conditions, secured advances, and progressive payments."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+          "expected": "100%",
+          "answer": "For a single quarter's Annual Maintenance Contract (AMC), 100% payment is made at the end of each quarter upon submission of quarterly progressive bills, certified by the Owner's authorized representative.\n\n[01a30e5b212a4bedbe4e8bd94f718721, Table under \"5. Annual Maintenance Contract (AMC):\" on Line 32]"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the date of the price negotiation meeting?",
+          "expected": "26.08.2022",
+          "answer": "The provided document \"01a30e5b212a4bedbe4e8bd94f718721\" does not contain information about a \"price negotiation meeting\" or its date. Therefore, I cannot answer your question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the withholding tax rate based on?",
+          "expected": "The prevailing rate as per the Indian Income Tax Act",
+          "answer": "The provided document does not contain information regarding withholding tax rates or the basis for their calculation. Therefore, I cannot answer your question from the given content."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+          "expected": "95%",
+          "answer": "The provided document structure and content do not contain specific information about the payment percentage for the installation of an individual pile for its full length. Therefore, I cannot answer your question."
+        }
+      ]
+    },
+    {
+      "input_path": "data\\sample 1\\Sample_PO-1.4 (SAP PO text).md",
+      "doc_id": "7e19d93e5aa74989a31e6012621339da",
+      "output_path": "index_workspace_e90aefcc13f84098aa016f1d06b5167d\\Sample_PO-1.4_SAP_PO_text_.md_7e19d93e5aa74989a31e6012621339da.json",
+      "results": [
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the GST rate for the contract?",
+          "expected": "18%",
+          "answer": "The GST rate for the contract is **18%**. The GST will be paid as per clause no. 3 & 4 of Special Conditions of Contract Part-B of the tender. (7e19d93e5aa74989a31e6012621339da: 2)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+          "expected": "16 (Sixteen) months",
+          "answer": "The time of completion for this work is 16 months from the date of the Fax of Acceptance (FOA), which is September 16, 2022.\n\nLine 50, Document 7e19d93e5aa74989a31e6012621339da"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What percentage is paid for the field testing of Piling?",
+          "expected": "80%",
+          "answer": "The provided document does not contain information about the percentage paid for the field testing of Piling. Therefore, I cannot answer your question."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+          "expected": "70%",
+          "answer": "The provided document does not specify the payment percentage upon receipt of false ceiling material at the site. It broadly states that \"Terms of payment for the work shall be as per tender and subsequent amendments/corrigendums issued\" (lines 81-82)."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the maximum percentage of the contract value allowed for a mobilization advance?",
+          "expected": "10%",
+          "answer": "The maximum percentage of the contract value allowed for a mobilization advance is 10% (Ten Percent). This advance is recoverable and interest-bearing, and it can be paid in two installments as per the provisions in clause no. 6.4.5.0 of the General Conditions of Contract and clause no. 8.2 of the Special Conditions of Contract Part-B of the tender.\n\nContent from document 7e19d93e5aa74989a31e6012621339da, line 50."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "How many months is the time of completion?",
+          "expected": "16 months",
+          "answer": "The time of completion for this work is 16 (Sixteen) months from the date of FOA (Fax of Acceptance), which is September 16, 2022.\n\n(lines 50-51, doc: 7e19d93e5aa74989a31e6012621339da)"
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+          "expected": "100%",
+          "answer": "The provided document mentions that \"Separate order for Comprehensive Annual Maintenance Contract (CAMC) covered in Section B (of SOR) item no. B1.2, B1.3 and B1.4 for an amount of Rs. Xxxxx will be placed by Panipat Refinery before the expiry of contractual warranty period / defect liability period as per NIT clause no. 22.0, Appendix-III of NIT and tender terms and conditions.\" (lines 33-37). However, the document does not specify the payment percentage upon completion of AMC for a single quarter."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the date of the price negotiation meeting?",
+          "expected": "26.08.2022",
+          "answer": "The price negotiation meeting was held on August 26, 2022 [1]."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the withholding tax rate based on?",
+          "expected": "The prevailing rate as per the Indian Income Tax Act",
+          "answer": "I need more information about withholding tax. The document discusses a \"Detailed Letter of Acceptance\" for a work tender, price escalation, advance payment, and contractor acknowledgement, but it does not contain a section or content related to withholding tax. Therefore, I cannot answer the question based on the provided document."
+        },
+        {
+          "category": "Exact Retrieval",
+          "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+          "expected": "95%",
+          "answer": "The provided document is a Detailed Letter of Acceptance for a work tender and contains information about contract value, payment terms, and price escalation. However, it does not specify the payment percentage for the installation of an individual pile for its full length. The document mentions a \"Schedule of Rates\" that is annexed, which would likely contain such details, but the content of this schedule is not provided.\n\nTherefore, the information you are looking for is not present in the provided document."
+        }
+      ]
+    }
+  ]
+}

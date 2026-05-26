@@ -1,0 +1,345 @@
+{
+  "Exact Retrieval": [
+    {
+      "query": "What is the GST rate for the contract?",
+      "answer": "18%"
+    },
+    {
+      "query": "What is the time of completion from the date of the Fax of Acceptance (FOA)?",
+      "answer": "16 (Sixteen) months"
+    },
+    {
+      "query": "What percentage is paid for the field testing of Piling?",
+      "answer": "80%"
+    },
+    {
+      "query": "What is the payment percentage upon receipt of false ceiling material at the site?",
+      "answer": "70%"
+    },
+    {
+      "query": "What is the maximum percentage of the contract value allowed for a mobilization advance?",
+      "answer": "10%"
+    },
+    {
+      "query": "How many months is the time of completion?",
+      "answer": "16 months"
+    },
+    {
+      "query": "What is the payment percentage upon completion of AMC for a single quarter?",
+      "answer": "100%"
+    },
+    {
+      "query": "What is the date of the price negotiation meeting?",
+      "answer": "26.08.2022"
+    },
+    {
+      "query": "What is the withholding tax rate based on?",
+      "answer": "The prevailing rate as per the Indian Income Tax Act"
+    },
+    {
+      "query": "What is the payment percentage for the installation of an individual pile for its full length?",
+      "answer": "95%"
+    }
+  ],
+
+  "Semantic Retrieval": [
+    {
+      "query": "How much money is held back for payment terms when processing invoices in VIM?",
+      "answer": "There is no need to withhold any amount"
+    },
+    {
+      "query": "Who takes ownership of materials once a secured advance is paid out?",
+      "answer": "The OWNER"
+    },
+    {
+      "query": "How often are bills submitted for the annual maintenance contract?",
+      "answer": "Quarterly"
+    },
+    {
+      "query": "What is the timeline to finish the job once the fax of acceptance is sent?",
+      "answer": "16 months"
+    },
+    {
+      "query": "Who acts as the Engineer-in-Charge for this project?",
+      "answer": "The Resident Construction Manager of the EPCM Consultant"
+    },
+    {
+      "query": "How much is paid when free-issue carbon steel pipes arrive cement-lined at the site?",
+      "answer": "15%"
+    },
+    {
+      "query": "Does the contractor pay for price fluctuations in MS plates?",
+      "answer": "No, Price Variation (Escalation/De-escalation) is allowed as per Annexure-B-II of Corrigendum1-Commercial"
+    },
+    {
+      "query": "What happens to the bank guarantee if the contractor repays 25% of the mobilization advance?",
+      "answer": "The OWNER may permit the CONTRACTOR to substitute it with a Bank Guarantee reduced by 25%"
+    },
+    {
+      "query": "How long is the warranty period for the bank guarantee covering the mobilization advance?",
+      "answer": "It must be valid for 3 months beyond the Scheduled period of Mechanical Completion"
+    },
+    {
+      "query": "What document replaces the GCC completion certificate if there is a different naming convention?",
+      "answer": "Whatever separate nomenclature is provided by various clients for the Completion certificate"
+    }
+  ],
+
+  "Multi-hop Retrieval": [
+    {
+      "query": "Who is the Engineer-in-Charge and what document should the contractor submit to them immediately?",
+      "answer": "The Resident Construction Manager of the EPCM Consultant is the Engineer-in-Charge, and the contractor must submit a detailed work schedule to him"
+    },
+    {
+      "query": "What is the maximum mobilization advance amount in INR and how many installments is it paid in?",
+      "answer": "Up to a maximum of INR 15,80,97,767, paid in two installments"
+    },
+    {
+      "query": "If the contractor gets a secured advance, what is the maximum percentage of the item rate allowed from the Schedule of Rates?",
+      "answer": "The advance is limited to the lower of 75% of the material value or 90% of the concerned item rate in the Schedule of Rates"
+    },
+    {
+      "query": "What is the interest rate applied if a Running Account Bill for mobilization advance recovery is delayed by 40 days?",
+      "answer": "Interest applied is 1% above the SBI cash credit advance rate. However, interest on the outstanding advance is only applied up to a period of 30 days from the submission of the Running Account Bill"
+    },
+    {
+      "query": "What clause governs the mobilization advance and what is the minimum total contract value required to get it?",
+      "answer": "It is governed by Clause 6.4.5.0, and the minimum contract value required is Rs. 5 crore"
+    },
+    {
+      "query": "What is the payment percentage for receipt of free-issue structural steel at the fabrication yard, and what is the final payment percentage upon completion?",
+      "answer": "50% is paid on transportation to the yard/fabrication/primer application, and 05% is paid upon completion of all works"
+    },
+    {
+      "query": "Which specific steel items have their price variation governed by Corrigendum 1-Commercial?",
+      "answer": "MS Plates, structural steel, and reinforcement steel"
+    },
+    {
+      "query": "How is the 5% bank guarantee for slippages calculated and how long must it remain valid?",
+      "answer": "It is a sum equal to 5% of the total contract value and must be valid for not less than 12 months from the date of final completion"
+    },
+    {
+      "query": "To whom are dispatch documents sent for package items and what percentage is paid upon this action?",
+      "answer": "They are sent through the Bank or directly to IOCL/CONSULTANT, and 65% is paid upon this action"
+    },
+    {
+      "query": "What is the payment percentage for HVAC drawing approval and what specific financial document must be submitted to get it?",
+      "answer": "5% is paid, and an ABG (Advance Bank Guarantee) of equivalent amount must be submitted"
+    }
+  ],
+
+  "Negative Query Handling": [
+    {
+      "query": "What is the late completion penalty rate?",
+      "answer": null
+    },
+    {
+      "query": "How much is the weekend work bonus?",
+      "answer": null
+    },
+    {
+      "query": "What is the payment milestone for fiberglass piping?",
+      "answer": null
+    },
+    {
+      "query": "What are the food allowance rates for site workers?",
+      "answer": null
+    },
+    {
+      "query": "What is the exact percentage withheld for safety violations?",
+      "answer": null
+    },
+    {
+      "query": "Who provides the heavy lifting cranes for structural erection?",
+      "answer": null
+    },
+    {
+      "query": "What is the early payment discount for VIM invoices?",
+      "answer": null
+    },
+    {
+      "query": "How many days of paid leave are allowed for the contractor's staff?",
+      "answer": null
+    },
+    {
+      "query": "What is the required thickness for the cement lining on free-issue pipes?",
+      "answer": null
+    },
+    {
+      "query": "What is the specified software for the structural steel design?",
+      "answer": null
+    }
+  ],
+
+  "Hallucination Resistance": [
+    {
+      "query": "What is the 50% milestone payment for Structural Steel Painting Works?",
+      "answer": "There is no 50% milestone. Payment is 95% after completion of primer/intermediate/final coats, and 5% on total completion"
+    },
+    {
+      "query": "How much mobilization advance is given for contracts valued at Rs. 2 crore?",
+      "answer": "None. Mobilization advances are only allowed for Contracts of a Total Contract Value of Rs. 5 crore and above"
+    },
+    {
+      "query": "What is the interest rate for the Secured Advance on imperishable materials?",
+      "answer": "The provided text does not mention an interest rate for Secured Advances; an interest rate (1% above SBI cash credit) is only stipulated for Mobilization Advances"
+    },
+    {
+      "query": "What are the payment terms for the 10-year Annual Maintenance Contract?",
+      "answer": "The documents do not specify a 10-year term. For the AMC, 100% payment is paid at the end of each quarter against progressive bills"
+    },
+    {
+      "query": "Which clause specifies the 12% GST rate for civil works?",
+      "answer": "The GST rate is 18%, not 12%"
+    },
+    {
+        "query":"What is the payment percentage for laying Contractor Supplied PVC pipes?",
+        "answer":"The document does not provide payment terms for PVC pipes, only for PVC Doors, Windows & Ventilators."
+    },
+    {
+        "query":"Why is a 10% amount withheld from VIM invoices?",
+        "answer":"No amount is withheld. The document explicitly states there is no need to withhold any amount from invoices processed at VIM on account of \"Payment terms\"."
+    },
+    {
+        "query":"What is the payment milestone for casting cement free-issue Precast concrete blocks?",
+        "answer":"50% on completion of casting work."
+    },
+    {
+        "query":"How much is paid on the receipt of free-issue modular furniture at the site?",
+        "answer":"The document specifies 60% on receipt of material for Modular Furniture, but it does not state that the furniture is \"free-issue\"."
+    },
+    {
+        "query":"What is the penalty if the price negotiation meeting is delayed past August 26, 2022?",
+        "answer":"No penalty is mentioned. The document states the meeting already took place on 26.08.2022."
+    }
+  ],
+
+  "Citation Quality": [
+    {
+      "query": "Which clause defines the Mobilization advance eligibility?",
+      "answer": "Clause 6.4.5.0"
+    },
+    {
+      "query": "Under what section number are the payment terms for AMC listed?",
+      "answer": "Section 5.0"
+    },
+    {
+      "query": "Which Document ID is associated with the tkIS Contract No. 66-6746?",
+      "answer": "6746-CMG-000-CA-0005"
+    },
+    {
+      "query": "Where is the clause located that discusses Price Escalation for MS Plates?",
+      "answer": "Clause 3.0 of the Detailed Letter of Acceptance"
+    },
+    {
+      "query": "Which annexure specifically outlines the ON ACCOUNT PAYMENTS?",
+      "answer": "Annexure-B-I"
+    },
+    {
+      "query": "What specific clause must be fulfilled regarding the Initial Security Deposit before getting a mobilization advance?",
+      "answer": "Clause 2.1.1.0"
+    },
+    {
+      "query": "Which clause covers the application of interest on the Final Bill for a mobilization advance?",
+      "answer": "Clause 6.4.5.1 (b)"
+    },
+    {
+      "query": "In which exact clause does the OWNER claim ownership of materials upon payment of a secured advance?",
+      "answer": "Clause 6.4.6.0 (d)"
+    },
+    {
+      "query": "Which SCC Part-B clause specifies the GST payment conditions?",
+      "answer": "Clause no. 3 & 4"
+    },
+    {
+      "query": "Where is the requirement for the PPLC declaration mentioned in the Detailed Letter of Acceptance?",
+      "answer": "Clause 11.0 and within the Enclosures to DLOA"
+    }
+  ],
+
+  "Confidence Calibration": [
+    {
+      "query": "What is the exact total nominal contract value?",
+      "answer": "Cannot be provided exactly; the source text redacts this value as INR xxxx"
+    },
+    {
+      "query": "What is the exact value of the CAMC order to be placed by Panipat Refinery?",
+      "answer": "Cannot be provided exactly; the source text redacts this value as Rs. Xxxxx"
+    },
+    {
+      "query": "What denomination of non-judicial stamp paper is required from Delhi State?",
+      "answer": "Cannot be provided exactly; the source text redacts this value as INR xxxx"
+    },
+    {
+      "query": "What is the exact name of the EPCM Consultant acting as Engineer-in-Charge?",
+      "answer": "Cannot be provided exactly; the name is redacted as Xxxx"
+    },
+    {
+      "query": "What specific materials are considered imperishable for a secured advance?",
+      "answer": "The document does not list specific materials; it states that the decision as to what materials are imperishable is up to the OWNER"
+    },
+    {
+      "query": "What is the exact State Bank of India declared rate for cash credit advances on the date of price bids?",
+      "answer": "The numeric rate is not provided in the document; only the formula referencing it is stated"
+    },
+    {
+      "query": "What is the specific nomenclature for the Completion certificate used by the client for this project?",
+      "answer": "The document notes that if a separate nomenclature is used by the client, it will replace the GCC standard, but it does not specify what that specific client nomenclature is"
+    },
+    {
+      "query": "What are the exact other deductions applied to progressive payments besides income tax?",
+      "answer": "The specific list of other deductions is not detailed, it only states deductions are made as applicable as per terms of the Contract"
+    },
+    {
+      "query": "Who exactly is the authorized representative of the Owner certifying the AMC bills?",
+      "answer": "The document does not name a specific individual or title, it broadly defers to the authorized representative of Owner"
+    },
+    {
+      "query": "What specific HVAC drawing documents are required to be approved at Code-2?",
+      "answer": "The document does not list the specific drawings; it notes they are to be identified in PO/PR/Kick of Meeting"
+    }
+  ],
+
+  "Overall RAG System": [
+    {
+      "query": "List the payment milestones for Soil Investigation.",
+      "answer": "80% on completion of work on prorate basis; 15% on submission of Final Documentation/Reports; 5% on completion of all works and issuance of certificate"
+    },
+    {
+      "query": "What are the payment percentages for Contractor Supplied carbon steel cement-lined pipes?",
+      "answer": "60% on receipt of lined pipe; 10% on fabrication; 10% on NDT/testing; 10% on laying/welding; 5% after flushing/testing; 5% on completion"
+    },
+    {
+      "query": "List the first four conditions (a through d) required before a mobilization advance is released.",
+      "answer": "(a) Signed Acceptance of Tender; (b) Furnished Initial Security Deposit; (c) Executed formal contract; (d) Formal application and furnished Bank Guarantee"
+    },
+    {
+      "query": "What are the payment steps for the fabrication of structural steel at the site using contractor-supplied material?",
+      "answer": "5% on finalization of quantities/drawings; 55% on receipt of material; 20% on fabrication/primer; 15% on erection/welding; 5% on completion of works"
+    },
+    {
+      "query": "Outline the payment terms for Package items like HVAC and Lifts.",
+      "answer": "5% on drawing approval; 10% against raw material identification; 65% against dispatch documents; 5% on receipt at site; 5% on receipt of Final As-built Drawings; 10% on completion of site work"
+    },
+    {
+      "query": "What nine documents constitute the Contract Agreement according to the DLOA?",
+      "answer": "(i) Contract signed on stamp paper, (ii) Tender Documents, (iii) Letter of Acceptance of Tender, (iv) Fax of Acceptance, (v) Minutes of price negotiation meeting, (vi) Nil Deviation form, (vii) Letter of waiver, (viii) Bidder's Declaration, (ix) Integrity Pact agreement"
+    },
+    {
+      "query": "List the payment breakdown for composite items of RCC work in non-suspended slabs.",
+      "answer": "40% on sand filling/centering/shuttering/PCC; 55% on RCC; 5% on completion"
+    },
+    {
+      "query": "Outline the rules and limits for secured advances on materials brought to the site.",
+      "answer": "The OWNER decides if materials are imperishable; the advance is limited to the lower of 75% of material value or 90% of the scheduled item rate; it is recovered from subsequent running bills; and ownership vests in the OWNER upon payment"
+    },
+    {
+      "query": "What is the payment schedule for steel/aluminium doors and windows?",
+      "answer": "75% on receipt of material; 20% on installation; 5% on completion"
+    },
+    {
+      "query": "Outline the breakdown for Composite items of Reinforced Cement Concrete (RCC) work in sub-structures.",
+      "answer": "35% on excavation/PCC/centering/shuttering; 45% on RCC; 15% on back filling; 5% on completion"
+    }
+  ]
+}

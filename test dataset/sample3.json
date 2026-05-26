@@ -1,0 +1,362 @@
+{
+  "Exact Retrieval": [
+    {
+      "query": "What is the location of the LPG Bottling Plant?",
+      "answer": "Kharagpur, West Bengal"
+    },
+    {
+      "query": "What was the original schedule completion date for the supply portion?",
+      "answer": "25.01.2021"
+    },
+    {
+      "query": "What is the newly extended completion date for the execution of works?",
+      "answer": "31-03-2023"
+    },
+    {
+      "query": "Until what date is the extension granted for Field Acceptance Test (FAT)?",
+      "answer": "30.06.2023"
+    },
+    {
+      "query": "On what exact date was the site initially handed over to the vendor?",
+      "answer": "21.04.2021"
+    },
+    {
+      "query": "What are the page numbers for the Special Conditions of Contract?",
+      "answer": "Pages 20-28"
+    },
+    {
+      "query": "Who approved the extension of completion time?",
+      "answer": "ED & SH, WBSO"
+    },
+    {
+      "query": "What is the DOA reference for the extension approval?",
+      "answer": "DOA 09.09 (ii)"
+    },
+    {
+      "query": "What is the date written on the Time Extension reference document?",
+      "answer": "07-03-2023"
+    },
+    {
+      "query": "How many months was the original completion period for supply from the LOA date?",
+      "answer": "07 (Seven) months"
+    }
+  ],
+
+  "Semantic Retrieval": [
+    {
+      "query": "Until when does the vendor need to stick around to help with commercial production?",
+      "answer": "30.06.2023"
+    },
+    {
+      "query": "Does the contract require the vendor to handle the delivery of materials?",
+      "answer": "Yes, Transportation and Supply are included in the scope"
+    },
+    {
+      "query": "What tasks must the vendor do after the plant is fully commissioned?",
+      "answer": "Compliance for inspecting agencies, FAT (Field Acceptance Test), and assistance during Gas-In/commercial production"
+    },
+    {
+      "query": "Was the very first delay in the project blamed on the vendor?",
+      "answer": "No, the initial extension was based on various reasons not attributable to party"
+    },
+    {
+      "query": "Which section of the technical bid should I read to understand the tax rules?",
+      "answer": "Special Terms & Conditions of Contract - Taxation Clauses"
+    },
+    {
+      "query": "Is the client happy with the project's current speed?",
+      "answer": "No, IOC expressed concern and deep resentment at the delay"
+    },
+    {
+      "query": "How did the vendor promise to fix the slow progress?",
+      "answer": "By completing works in a time-bound manner and positioning more manpower"
+    },
+    {
+      "query": "Who is responsible for keeping an eye on the site's progress?",
+      "answer": "The Site team and LPG-Engg, WBSO"
+    },
+    {
+      "query": "Are computer control systems part of this contract?",
+      "answer": "Yes, Automation Systems are explicitly included"
+    },
+    {
+      "query": "Which part of the index explains how the contractor will be graded?",
+      "answer": "Guidelines for Evaluation of Contractors Performance (Sr. No. 6)"
+    }
+  ],
+
+  "Multi-hop Retrieval": [
+    {
+      "query": "How much time passed between the original supply completion date and the newly extended supply date?",
+      "answer": "Approximately 21 months (from 25.01.2021 to 31.10.2022)"
+    },
+    {
+      "query": "Did the site handover occur before or after the original supply deadline?",
+      "answer": "After. The supply deadline was 25.01.2021, and the site was handed over on 21.04.2021"
+    },
+    {
+      "query": "In which broad section of the document are the taxation clauses located?",
+      "answer": "PART-A Techno-Commercial Terms & Conditions"
+    },
+    {
+      "query": "Does the final FAT extension date happen before or after the extended execution date?",
+      "answer": "After. Execution ends 31-03-2023; FAT extension is up to 30.06.2023"
+    },
+    {
+      "query": "Who is responsible for addressing OISD compliance issues after March 2023?",
+      "answer": "The vendor (valid up to 30.06.2023)"
+    },
+    {
+      "query": "Based on the site handover date, how many months did the execution phase originally take?",
+      "answer": "05 (Five) months (from 21.04.2021 to 20.09.2021)"
+    },
+    {
+      "query": "Which annexure dictated the original timelines for the Kharagpur plant?",
+      "answer": "Annexure 4"
+    },
+    {
+      "query": "Did the vendor's top officials meet with IOC before or after the site was initially handed over?",
+      "answer": "After. The site was handed over in 2021, and the meeting is referenced in the 2023 extension note"
+    },
+    {
+      "query": "What is the scope of work for the site handed over on 21.04.2021?",
+      "answer": "Execution of works and commissioning of electrical, instrumentation, and automation"
+    },
+    {
+      "query": "What is the new deadline for the supply tasks originally defined under Part A of Annexure 4?",
+      "answer": "31-10-2022"
+    }
+  ],
+
+  "Negative Query Handling": [
+    {
+      "query": "What is the total financial value of the contract in INR?",
+      "answer": null
+    },
+    {
+      "query": "What is the name of the vendor's project manager?",
+      "answer": null
+    },
+    {
+      "query": "How much financial penalty (Liquidated Damages) is applied for the delay?",
+      "answer": null
+    },
+    {
+      "query": "How many years is the warranty period after the Field Acceptance Test?",
+      "answer": null
+    },
+    {
+      "query": "Are civil construction and concrete pouring works included in the scope?",
+      "answer": "No, the scope only covers Electrical, Instrumentation, and Automation Systems"
+    },
+    {
+      "query": "What brand of PLCs or instruments are being installed?",
+      "answer": null
+    },
+    {
+      "query": "Exactly how many additional workers will the vendor position at the site?",
+      "answer": null
+    },
+    {
+      "query": "What was the exact date the Letter of Award (LOA) was physically issued?",
+      "answer": "The exact date is not stated"
+    },
+    {
+      "query": "What is the address of the vendor's headquarters?",
+      "answer": null
+    },
+    {
+      "query": "Which specific external agency aside from OISD raised compliance points?",
+      "answer": null
+    }
+  ],
+
+  "Hallucination Resistance": [
+    {
+      "query": "Since the project is in Kharagpur, is IIT Kharagpur doing the engineering inspection?",
+      "answer": "The documents do not mention IIT Kharagpur; it only mentions internal/external agencies and OISD"
+    },
+    {
+      "query": "Was the extension to 31-03-2023 granted specifically because of COVID-19 lockdowns?",
+      "answer": "The documents mention various reasons not attributable to party, but COVID-19 is not explicitly stated"
+    },
+    {
+      "query": "Because supply is delayed until Oct 2022, execution is automatically delayed until Oct 2023, correct?",
+      "answer": "Incorrect. Execution is extended only until 31-03-2023"
+    },
+    {
+      "query": "Is Larsen & Toubro the vendor for this electrical project?",
+      "answer": "The vendor's name is not explicitly mentioned/is redacted in the text"
+    },
+    {
+      "query": "Does the technical bid index list the Price Schedule on page 35?",
+      "answer": "The provided index only goes up to page 31; Price Schedule is not listed in the provided excerpt"
+    },
+    {
+        "query":"Was the previous time extension approved by the CEO of IOC?",
+        "answer":"No, it was approved by ED & SH, WBSO."
+    },
+    {
+        "query":"Does the Field Acceptance Test take exactly 3 months to complete?",
+        "answer":"The text says the extension is up to 30.06.2023, not that the test itself takes exactly 3 months."
+    },
+    {
+        "query":"Is the LPG plant owned by HPCL?",
+        "answer":"No, it is owned by IOC (Indian Oil Corporation), as IOC is the one expressing resentment."
+    },
+    {
+        "query": "Did OISD completely reject the initial commissioning of the plant?",
+        "answer": "The text does not say they rejected it; it only mentions \"Compliances of any points raised by... OISD\"."
+    },
+    {
+        "query": "Are the automation systems being imported from Germany?",
+        "answer": "The documents do not state the origin of the automation systems."
+    }
+  ],
+
+  "Citation Quality": [
+    {
+      "query": "Provide the exact quote regarding the final extended supply date.",
+      "answer": "\"For supply portion, extension of time up to 31-10-2022.\""
+    },
+    {
+      "query": "Quote the vendor's specific assurance to the management regarding the delay.",
+      "answer": "\"Vendor has assured that they would now be completing the works in time bound manner by positioning more manpower.\""
+    },
+    {
+      "query": "Which section covers the Notice Inviting Tender and on what pages?",
+      "answer": "\"Notice Inviting Tender\" is found on pages 3-11"
+    },
+    {
+      "query": "Provide the exact quote defining the original execution completion timeline.",
+      "answer": "\"FOR EXECUTION: The completion period is 05 (Five) month from the date of site handing over.\""
+    },
+    {
+      "query": "Under what specific delegation of authority clause was the extension approved?",
+      "answer": "\"DOA 09.09 (ii)\""
+    },
+    {
+      "query": "Quote the conditions under which the vendor must stay after commissioning.",
+      "answer": "\"...after commissioning since presence of vendor is required at site, extension of time for (3)-a/b/c up to 30.06.2023\""
+    },
+    {
+      "query": "What are the contents of Pages 14-19 of the Technical Bid?",
+      "answer": "\"Instruction to Tenderers & Particular Conditions of Contract\""
+    },
+    {
+      "query": "Quote the reference number for the first administrative approval note from March 2021.",
+      "answer": "\"Administrative approval/2178/LPGO/2020-21/82092 dated 04.03.2021.\""
+    },
+    {
+      "query": "Where exactly in the index are the Special Conditions of Contract located?",
+      "answer": "\"Sr.No. 4, PAGE NO 20-28\""
+    },
+    {
+      "query": "What exact terminology is used for the FAT?",
+      "answer": "\"FAT (Field Acceptance Test)\""
+    }
+  ],
+
+  "Confidence Calibration": [
+    {
+      "query": "Exactly how many days of the delay were the direct fault of the vendor?",
+      "answer": "Cannot answer with high confidence; the documents do not quantify the exact number of delay days attributable to the vendor"
+    },
+    {
+      "query": "What were the exact safety hazards pointed out by OISD during their inspection?",
+      "answer": "Cannot answer; the specific OISD compliance points are not detailed in the documents"
+    },
+    {
+      "query": "Will the project definitely be commercially operational by 31-03-2023?",
+      "answer": "Low confidence; 31-03-2023 is a revised target deadline, not a guaranteed operational date"
+    },
+    {
+      "query": "What specific electrical components failed testing?",
+      "answer": "Cannot answer; no failed components are mentioned in the documents"
+    },
+    {
+      "query": "Who is the specific individual person that signed the approval on 07-03-2023?",
+      "answer": "Cannot answer; the approval signature is redacted"
+    },
+    {
+      "query": "Is the Notice Inviting Tender exactly 8 pages long?",
+      "answer": "No. It spans pages 3-11 inclusive, which totals 9 pages"
+    },
+    {
+      "query": "Will Gas-In happen exactly on the date of 30.06.2023?",
+      "answer": "Low confidence; 30.06.2023 is the deadline for vendor assistance during Gas-In, not necessarily the Gas-In date itself"
+    },
+    {
+      "query": "What is the primary cause of the initial delay not attributable to the party?",
+      "answer": "Cannot answer; the documents only mention various reasons not attributable to party without specifics"
+    },
+    {
+      "query": "Which internal agency specifically raised compliance points?",
+      "answer": "Cannot answer; the documents refer generally to internal/external agencies"
+    },
+    {
+      "query": "Does the vendor have enough manpower to finish by the new deadline?",
+      "answer": "Low confidence; the vendor assured additional manpower, but the documents indicate progress still requires close monitoring"
+    }
+  ],
+
+  "Overall RAG System": [
+    {
+      "query": "Summarize the timeline changes for the execution phase, including the original and revised dates.",
+      "answer": "The execution phase originally had a 5-month completion schedule ending on 20.09.2021 based on a 21.04.2021 site handover. Due to prolonged delays, the revised execution completion date was extended to 31.03.2023"
+    },
+    {
+      "query": "Provide a bulleted list of the three specific tasks the vendor is required to complete after the plant is commissioned, according to the extension note.",
+      "answer": [
+        "Compliance of any points raised by internal/external inspecting agencies including OISD",
+        "Conducting the FAT (Field Acceptance Test)",
+        "Providing assistance during Gas-In and commercial production"
+      ]
+    },
+    {
+      "query": "Explain the conflict between the client (IOC) and the vendor regarding the project timeline.",
+      "answer": "IOC management expressed concern and deep resentment over repeated project delays. In response, the vendor assured IOC that additional manpower would be deployed and the remaining works would be completed in a time-bound manner"
+    },
+    {
+      "query": "What are the three core engineering disciplines covered in the vendor's scope for the Kharagpur plant?",
+      "answer": "Electrical, Instrumentation, and Automation"
+    },
+    {
+      "query": "Create a 2-column table showing the Section Names and Page Numbers for the first 3 items in the Technical Bid Index.",
+      "answer": [
+        {
+          "section_name": "Notice Inviting Tender",
+          "page_no": "3-11"
+        },
+        {
+          "section_name": "Important guidelines to Tenderer",
+          "page_no": "12-13"
+        },
+        {
+          "section_name": "Instruction to Tenderers & Particular Conditions of Contract",
+          "page_no": "14-19"
+        }
+      ]
+    },
+    {
+      "query": "Based on the extension document, what is the sequence of the three main project phases?",
+      "answer": "1) Supply, 2) Execution of works & Commissioning, 3) Post-commissioning tasks including FAT and Gas-In assistance"
+    },
+    {
+      "query": "Are there any indications in the Technical Bid cover page that the vendor is responsible for mechanical pipe-fitting?",
+      "answer": "No. The technical bid explicitly limits the scope to Electrical, Instrumentation, and Automation Systems"
+    },
+    {
+      "query": "Contrast the justification for the initial supply extension (March 2021) with the justification for the final extension (March 2023).",
+      "answer": "The initial extension in 2021 was granted for various reasons not attributable to party. By 2023, IOC had expressed serious dissatisfaction with delays and the vendor committed to deploying additional manpower to accelerate completion"
+    },
+    {
+      "query": "What is the relationship/workflow between the HO (Head Office) and WBSO for this time extension?",
+      "answer": "The HO (CGM LPG-Engg) conducted discussions with the vendor management regarding delays and corrective measures, while the WBSO (ED & SH) formally processed and approved the time extension under DOA authority"
+    },
+    {
+      "query": "Write a concise, one-sentence summary of the vendor's entire scope of work.",
+      "answer": "The vendor is responsible for the design, procurement, supply, installation, testing, and commissioning of Electrical, Instrumentation, and Automation Systems for the LPG Bottling Plant at Kharagpur, West Bengal"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
-import json
 import os
-import re
-import urllib.error
-import urllib.request
-from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from dotenv import load_dotenv
 
+from agno.agent import Agent
+from agno.models.openrouter import OpenRouter
+
 from retrieval import get_content, get_structure
+from tracing_utils import setup_tracing, span
 
 
 def _load_openrouter_config() -> Tuple[str, str, str]:
@@ -29,107 +29,108 @@ def _load_openrouter_config() -> Tuple[str, str, str]:
 	return api_key, base_url, model
 
 
-def _call_openrouter(messages: List[Dict[str, str]], temperature: float = 0.2) -> str:
-	api_key, base_url, model = _load_openrouter_config()
-	endpoint = base_url.rstrip("/") + "/chat/completions"
-	payload = {
-		"model": model,
-		"messages": messages,
-		"temperature": temperature,
-	}
-	request = urllib.request.Request(
-		endpoint,
-		data=json.dumps(payload).encode("utf-8"),
-		headers={
-			"Authorization": f"Bearer {api_key}",
-			"Content-Type": "application/json",
-		},
-		method="POST",
+def _build_agent(base_dir: Optional[str]) -> Agent:
+	api_key, base_url, model_id = _load_openrouter_config()
+
+	def get_structure_tool(doc_id: str) -> Dict[str, Any]:
+		"""Return document structure without node content."""
+		with span("tool.get_structure", {"doc_id": doc_id}):
+			return get_structure(doc_id, base_dir)
+
+	def get_content_tool(doc_id: str, line_nos: List[int]) -> Dict[int, str]:
+		"""Return content for nodes whose line_no is in the provided list."""
+		attrs = {
+			"doc_id": doc_id,
+			"line_count": str(len(line_nos)),
+			"line_nos": ",".join(str(value) for value in line_nos),
+		}
+		with span("tool.get_content", attrs):
+			return get_content(doc_id, *line_nos, base_dir=base_dir)
+
+	instructions = [
+		"You are a vector-less RAG assistant over indexed markdown nodes.",
+		"When given multiple document IDs, call get_structure(doc_id) for each before selecting which document to use.",
+		"Then call get_content(doc_id, line_nos=[...]) with relevant line numbers from the selected document(s).",
+		"Iterate if needed and answer using only retrieved content.",
+		"If content is insufficient, say so explicitly.",
+		"Include cited line numbers and document IDs in the final answer.",
+	]
+
+	return Agent(
+		model=OpenRouter(id=model_id, api_key=api_key, base_url=base_url),
+		tools=[get_structure_tool, get_content_tool],
+		instructions=instructions,
+		markdown=True,
+		tool_call_limit=12,
 	)
-
-	try:
-		with urllib.request.urlopen(request, timeout=60) as response:
-			body = response.read().decode("utf-8")
-	except urllib.error.HTTPError as exc:
-		error_body = exc.read().decode("utf-8", errors="ignore")
-		raise RuntimeError(f"OpenRouter error {exc.code}: {error_body}") from exc
-	except urllib.error.URLError as exc:
-		raise RuntimeError(f"OpenRouter request failed: {exc.reason}") from exc
-
-	data = json.loads(body)
-	try:
-		return data["choices"][0]["message"]["content"].strip()
-	except (KeyError, IndexError, AttributeError) as exc:
-		raise RuntimeError("Unexpected OpenRouter response format.") from exc
-
-
-def _extract_line_nos(text: str) -> List[int]:
-	try:
-		data = json.loads(text)
-		line_nos = data.get("line_nos", [])
-		return [int(value) for value in line_nos if str(value).isdigit()]
-	except json.JSONDecodeError:
-		pass
-	return [int(value) for value in re.findall(r"\b\d+\b", text)]
 
 
 class VectorlessAgent:
 	def __init__(self, base_dir: Optional[str] = None) -> None:
 		self.base_dir = base_dir
+		setup_tracing("retrieval")
+		self._agent = _build_agent(base_dir)
 
-	def _select_line_nos(self, doc_id: str, query: str) -> List[int]:
-		structure = get_structure(doc_id, self.base_dir)
-		messages = [
-			{
-				"role": "system",
-				"content": (
-					"You select relevant node line numbers from a document structure for a query. "
-					"Return only JSON: {\"line_nos\":[...],\"rationale\":\"...\"}."
-				),
-			},
-			{
-				"role": "user",
-				"content": (
-					"Document structure (content removed):\n"
-					f"{json.dumps(structure, ensure_ascii=True)}\n\n"
-					f"Query: {query}\n"
-					"Pick the smallest set of line_nos that likely contain the answer."
-				),
-			},
-		]
-		response = _call_openrouter(messages)
-		line_nos = _extract_line_nos(response)
-		return sorted(set(line_nos))
-
-	def _answer_from_content(self, query: str, content_map: Dict[int, str]) -> str:
-		content_lines = [
-			f"Line {line_no}:\n{content}"
-			for line_no, content in content_map.items()
-		]
-		context = "\n\n".join(content_lines)
-		messages = [
-			{
-				"role": "system",
-				"content": (
-					"Answer the query using only the provided content. "
-					"If the content is insufficient, say so explicitly."
-				),
-			},
-			{
-				"role": "user",
-				"content": f"Query: {query}\n\nContent:\n{context}",
-			},
-		]
-		return _call_openrouter(messages)
+	def _attach_run_metrics(self, current_span, run_output) -> None:
+		if current_span is None:
+			return
+		metrics = getattr(run_output, "metrics", None)
+		if metrics is None:
+			return
+		for key in (
+			"input_tokens",
+			"output_tokens",
+			"total_tokens",
+			"prompt_tokens",
+			"completion_tokens",
+			"cost",
+			"total_cost",
+		):
+			value = getattr(metrics, key, None)
+			if value is not None:
+				current_span.set_attribute(f"llm.{key}", str(value))
+		details = getattr(metrics, "details", None)
+		if isinstance(details, dict):
+			for key, value in details.items():
+				current_span.set_attribute(f"llm.details.{key}", str(value))
 
 	def answer_query(self, doc_id: str, query: str) -> str:
-		line_nos = self._select_line_nos(doc_id, query)
-		if not line_nos:
-			return "No relevant nodes found to answer the query."
-		content_map = get_content(doc_id, *line_nos, base_dir=self.base_dir)
-		if not content_map:
-			return "No content found for the selected nodes."
-		return self._answer_from_content(query, content_map)
+		with span(
+			"agent.run",
+			{"doc_id": doc_id, "query_length": str(len(query))},
+		) as current_span:
+			prompt = (
+				f"Document ID: {doc_id}\n"
+				f"Question: {query}\n\n"
+				"Follow the tool-use steps in your instructions."
+			)
+			run_output = self._agent.run(prompt)
+			content = getattr(run_output, "content", None)
+			if current_span is not None and content:
+				current_span.set_attribute("llm.response_length", str(len(content)))
+				current_span.set_attribute("llm.response_preview", content[:500])
+			self._attach_run_metrics(current_span, run_output)
+			return content if content is not None else str(run_output)
+
+	def answer_query_across_docs(self, doc_ids: List[str], query: str) -> str:
+		with span(
+			"agent.run",
+			{"doc_count": str(len(doc_ids)), "query_length": str(len(query))},
+		) as current_span:
+			doc_list = ", ".join(doc_ids)
+			prompt = (
+				f"Document IDs: {doc_list}\n"
+				f"Question: {query}\n\n"
+				"Call get_structure for each document ID before selecting which document(s) to use. "
+				"Then call get_content for the relevant line numbers."
+			)
+			run_output = self._agent.run(prompt)
+			content = getattr(run_output, "content", None)
+			if current_span is not None and content:
+				current_span.set_attribute("llm.response_length", str(len(content)))
+				current_span.set_attribute("llm.response_preview", content[:500])
+			self._attach_run_metrics(current_span, run_output)
+			return content if content is not None else str(run_output)
 
 	def answer_queries(self, doc_id: str, queries: Iterable[str]) -> Dict[str, str]:
 		results: Dict[str, str] = {}
